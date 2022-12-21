@@ -1,2 +1,2 @@
 # anon_webshop
-noname webshop for practise
+noname webshop for full-stack practice
