@@ -1,6 +1,11 @@
 import type {Actions} from "./$types";
 import {AuthApiError} from "@supabase/supabase-js";
 import {fail, redirect} from "@sveltejs/kit";
+import type {PageServerLoad} from "./$types";
+
+export const load: PageServerLoad = async ({locals}) => {
+    if (locals.session) throw redirect(302, "/home");
+}
 
 export const actions: Actions = {
     login: async ({request, locals}) => {
