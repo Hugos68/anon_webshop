@@ -36,14 +36,15 @@
 
     :global(a) {
         text-decoration: none;
-        color: inherit;
+    }
+    :global(h1, h2, h3, h4, h5, a, p) {
+        color: var(--accent-color);
     }
 
     :global(body) {
         min-height: 100vh;
         margin: 0;
         background-color: var(--background-color);
-
         font-family: poppins, serif;
     }
 
@@ -51,8 +52,27 @@
         color: var(--accent-color);
     }
 
-    :global(input) {
-        background-color: var(--background-color);
+    :global(input, button) {
+        border: var(--accent-color) solid 2px;
+        background-color: rgba(0,0,0,0);
         color: var(--accent-color);
+        padding: 0.5rem;
+        min-width: 12.5rem;
+        transition: border-radius 0.25s ease-in-out;
+        border-radius: 0.25rem;
+    }
+    :global(input:focus) {
+        outline:none;
+        border-radius: 0.75rem;
+    }
+
+    /*
+     * Disables the yellow background on autofill
+     */
+    :global(input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active) {
+        -webkit-box-shadow: 0 0 0 30px var(--background-color) inset;
     }
 </style>

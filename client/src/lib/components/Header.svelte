@@ -93,7 +93,6 @@
         background-color: var(--lighter-background-color);
         transform: translateX(-100%);
         transition: all 0.25s ease-in-out;
-        box-shadow: 0 0 0.1rem 0.25rem;
     }
 
     .hamburger-menu > nav {
@@ -119,6 +118,7 @@
         }
         #hamburger-checkbox:checked ~ .hamburger-menu {
             transform: translateX(0%);
+            box-shadow: 0 0 1rem 0.25rem;
         }
         #hamburger-checkbox:checked ~ .hamburger-icon > .hamburger {
             opacity: 0;

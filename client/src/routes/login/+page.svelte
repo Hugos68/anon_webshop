@@ -14,7 +14,16 @@
 </main>
 
 <style>
+    main {
+        display: flex;
+        justify-content: center;
+        margin-top: 12.5vh;
+    }
     form {
         display: flex;
+        flex-direction: column;
+    }
+    form > button {
+        margin-top: 2.5rem;
     }
 </style>

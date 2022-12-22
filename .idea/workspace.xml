@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="changed name of stripes svg to hamburger">
+    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Sign up and login now stack when the screen becomes small enough">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/lib/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/components/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/+layout.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1671639515285</updated>
       <workItem from="1671639516656" duration="10580000" />
-      <workItem from="1671713607012" duration="3721000" />
+      <workItem from="1671713607012" duration="4717000" />
     </task>
     <task id="LOCAL-00001" summary="Init setup">
       <created>1671640040681</created>
@@ -126,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671716699607</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Sign up and login now stack when the screen becomes small enough">
+      <created>1671717465073</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671717465073</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +148,7 @@
     <MESSAGE value="matching padding inside hamburger with padding from header" />
     <MESSAGE value="Fixed coloring of stripes and cross" />
     <MESSAGE value="changed name of stripes svg to hamburger" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed name of stripes svg to hamburger" />
+    <MESSAGE value="Sign up and login now stack when the screen becomes small enough" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sign up and login now stack when the screen becomes small enough" />
   </component>
 </project>
