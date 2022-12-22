@@ -15,23 +15,23 @@
 
     <div class="hamburger-menu">
         <nav>
-            <a href="/home">Home</a>
-            <a href="/shop">Shop</a>
-            <a href="/about">About</a>
+            <a href="/home" class:active={$page.url.pathname === '/home'}>Home</a>
+            <a href="/shop" class:active={$page.url.pathname === '/shop'}>Shop</a>
+            <a href="/about" class:active={$page.url.pathname === '/about'}>About</a>
         </nav>
     </div>
     <nav>
         <div class="nav-left">
-            <a href="/home">Home</a>
-            <a href="/shop">Shop</a>
-            <a href="/about">About</a>
+            <a href="/home" class:active={$page.url.pathname === '/home'}>Home</a>
+            <a href="/shop" class:active={$page.url.pathname === '/shop'}>Shop</a>
+            <a href="/about" class:active={$page.url.pathname === '/about'}>About</a>
         </div>
         <div class="nav-right">
             {#if $page.data.session}
-                <a href="/account">Account</a>
+                <a href="/account" class:active={$page.url.pathname === '/account'}>Account</a>
             {:else}
-                <a href="/signup">Sign up</a>
-                <a href="/login">Log in</a>
+                <a href="/signup" class:active={$page.url.pathname === '/signup'}>Sign up</a>
+                <a href="/login" class:active={$page.url.pathname === '/login'}>Log in</a>
             {/if}
         </div>
     </nav>
@@ -61,6 +61,10 @@
     a {
         padding-inline: 0.5em;
         font-size: 1.5rem;
+        color: var(--darker-accent-color);
+    }
+
+    a.active {
         color: var(--accent-color);
     }
 
@@ -77,7 +81,7 @@
     }
 
     .hamburger, .cross {
-        top: 2.75rem;
+        top: calc(var(--nav-height)/8 * 3);
         position: absolute;
         transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
     }

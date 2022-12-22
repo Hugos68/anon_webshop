@@ -23,10 +23,11 @@
 
 <style>
     :global(:root) {
-        --nav-height: 7.5rem;
+        --nav-height: 6rem;
         --background-color: #121212;
         --lighter-background-color: #191919;
-        --accent-color: #dadada
+        --accent-color: #dadada;
+        --darker-accent-color: #bcbcbc;
     }
 
     @font-face {
