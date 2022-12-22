@@ -59,7 +59,7 @@
     }
 
     a {
-        padding: 0.5em;
+        padding-inline: 0.5em;
         font-size: 1.5rem;
         color: var(--accent-color);
     }
@@ -127,6 +127,13 @@
         #hamburger-checkbox:not(:checked) ~ .hamburger-icon > .cross {
             opacity: 0;
             transform: rotate(-360deg);
+        }
+    }
+    @media (max-width: 400px) {
+        header > nav > .nav-right {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
         }
     }
 </style>

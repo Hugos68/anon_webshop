@@ -12,3 +12,9 @@
         <button type="submit">Login</button>
     </form>
 </main>
+
+<style>
+    form {
+        display: flex;
+    }
+</style>

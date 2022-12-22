@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Fixed coloring of stripes and cross">
+    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="changed name of stripes svg to hamburger">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/lib/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/components/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1671639515285</updated>
       <workItem from="1671639516656" duration="10580000" />
-      <workItem from="1671713607012" duration="3050000" />
+      <workItem from="1671713607012" duration="3721000" />
     </task>
     <task id="LOCAL-00001" summary="Init setup">
       <created>1671640040681</created>
@@ -117,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671716668577</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="changed name of stripes svg to hamburger">
+      <created>1671716699607</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671716699607</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +140,7 @@
     <MESSAGE value="Better sizing for hamburger menu" />
     <MESSAGE value="matching padding inside hamburger with padding from header" />
     <MESSAGE value="Fixed coloring of stripes and cross" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed coloring of stripes and cross" />
+    <MESSAGE value="changed name of stripes svg to hamburger" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed name of stripes svg to hamburger" />
   </component>
 </project>
