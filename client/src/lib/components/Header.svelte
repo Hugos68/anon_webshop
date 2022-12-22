@@ -103,7 +103,7 @@
 
     .hamburger-menu > nav > a {
         font-size: 2rem;
-        padding-left: 2rem;
+        padding-inline: 2rem;
     }
 
     @media (max-width: 800px) {
