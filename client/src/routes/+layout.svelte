@@ -65,6 +65,9 @@
         outline:none;
         border-radius: 0.75rem;
     }
+    :global(button:hover) {
+        cursor: pointer;
+    }
 
     /*
      * Disables the yellow background on autofill
