@@ -87,6 +87,7 @@
         top: 0;
         left: 0;
         width: 17.5rem;
+        max-width: 80vw;
         height: 100vh;
         background-color: var(--lighter-background-color);
         transform: translateX(-100%);
@@ -98,7 +99,6 @@
         display: flex;
         flex-direction: column;
         margin-top: var(--nav-height);
-
     }
 
     .hamburger-menu > nav > a {
