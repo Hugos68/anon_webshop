@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Enhanced user experience by closing hamburger when clicking on one of the options">
-      <change afterPath="$PROJECT_DIR$/client/src/routes/shop/+page.server.ts" afterDir="false" />
+    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Added shop listing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/lib/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/components/Header.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/+error.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/+error.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/+layout.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/routes/shop/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/shop/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671745923904</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added shop listing">
+      <created>1671750114260</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671750114260</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +205,7 @@
     <MESSAGE value="Put toasts and toast style in global variable" />
     <MESSAGE value="Error handling" />
     <MESSAGE value="Enhanced user experience by closing hamburger when clicking on one of the options" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enhanced user experience by closing hamburger when clicking on one of the options" />
+    <MESSAGE value="Added shop listing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added shop listing" />
   </component>
 </project>
