@@ -36,8 +36,6 @@
         box-shadow: 0 0 0.25rem 0.25rem;
         display: flex;
         align-items: center;
-        flex-direction: row-reverse;
-        transition: transform 1s ease-in-out;
     }
 
     nav {
@@ -58,8 +56,6 @@
     .hamburger {
         cursor: pointer;
         display: none;
-        position: absolute;
-        top: 2.75rem;
     }
 
     #checkbox {
@@ -73,16 +69,8 @@
         .hamburger {
             display: block;
         }
-        header > nav > a:nth-child(3) {
-            margin-right: 0;
-        }
-        header > nav {
-            gap: 5rem;
-            justify-content: center;
-            transition: all 0.2s ease;
-        }
-        #checkbox:checked ~ nav > div > a{
-            display: block;
+        #checkbox:checked ~ nav {
+            background-color: red;
         }
     }
 </style>
