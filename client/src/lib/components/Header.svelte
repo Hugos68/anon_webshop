@@ -47,7 +47,7 @@
 
 <style>
     header {
-        z-index: 1;
+        z-index: 997;
         padding-inline: 2rem;
         background-color: var(--background-color);
         box-shadow: 0 0 0.25rem 0.25rem;
@@ -56,8 +56,8 @@
     }
 
     header > nav {
-        min-height: var(--nav-height);
         width: 100vw;
+        min-height: var(--nav-height);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -75,12 +75,12 @@
     }
 
     #hamburger-checkbox {
-        z-index: 3;
+        z-index: 999;
         display: none;
     }
 
     .hamburger-icon {
-        z-index: 3;
+        z-index: 999;
         cursor: pointer;
         display: none;
         color: var(--accent-color);
@@ -93,7 +93,7 @@
     }
 
     .hamburger-menu {
-        z-index: 2;
+        z-index: 998;
         position: absolute;
         top: 0;
         left: 0;

@@ -40,7 +40,7 @@
     :global(a) {
         text-decoration: none;
     }
-    :global(h1, h2, h3, h4, h5, a, p) {
+    :global(h1, h2, h3, h4, h5, a, p, img) {
         color: var(--accent-color);
     }
 

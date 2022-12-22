@@ -2,10 +2,15 @@
     import { page } from '$app/stores';
 </script>
 
+<main>
+    <h1>{$page.status}: {$page.error.message}</h1>
+</main>
 
-<h1>{$page.status}: {$page.error.message}</h1>
 
 <style>
+    main {
+        margin-top: 12.5vh;
+    }
     h1 {
         text-align: center;
     }
