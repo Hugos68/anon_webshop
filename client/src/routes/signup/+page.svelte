@@ -1,12 +1,16 @@
-<script>
-    import {enhance} from "$app/forms";
+<script lang="ts">
+    import {applyAction, enhance} from "$app/forms";
     import toast from "svelte-french-toast";
     import {TOAST_STYLE} from "../../app_constants.ts";
 
     async function handleSignup() {
         return async ({ result }) => {
+            await applyAction(result);
             if (result.type === 'redirect') {
-                toast.success('Successfully signed up!', TOAST_STYLE);
+                toast.success('Successfully signed up!, confirm your email to get started', TOAST_STYLE);
+            }
+            else {
+                toast.error(result.data.message, TOAST_STYLE);
             }
         };
     }

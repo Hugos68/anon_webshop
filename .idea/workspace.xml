@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Put toasts and toast style in global variable">
+    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Error handling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/lib/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/components/Header.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/+error.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/+error.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/signup/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/signup/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671720506271</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Error handling">
+      <created>1671745088290</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671745088290</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +189,7 @@
     <MESSAGE value="button hovering pointer cursor" />
     <MESSAGE value="added padding to the header" />
     <MESSAGE value="Put toasts and toast style in global variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Put toasts and toast style in global variable" />
+    <MESSAGE value="Error handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error handling" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import {applyAction, enhance} from "$app/forms";
     import toast from "svelte-french-toast";
     import {TOAST_STYLE} from "../../app_constants.ts";
@@ -8,6 +8,9 @@
             await applyAction(result);
             if (result.type === 'redirect') {
                 toast.success('Successfully logged in!', TOAST_STYLE);
+            }
+            else {
+                toast.error(result.error, TOAST_STYLE);
             }
         };
     }

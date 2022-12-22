@@ -15,9 +15,15 @@
 
     <div class="hamburger-menu">
         <nav>
-            <a href="/home" class:active={$page.url.pathname === '/home'}>Home</a>
-            <a href="/shop" class:active={$page.url.pathname === '/shop'}>Shop</a>
-            <a href="/about" class:active={$page.url.pathname === '/about'}>About</a>
+            <a href="/home" class:active={$page.url.pathname === '/home'} on:click={() => {
+                document.getElementById("hamburger-checkbox").checked = false;
+            }}>Home</a>
+            <a href="/shop" class:active={$page.url.pathname === '/shop'} on:click={() => {
+                document.getElementById("hamburger-checkbox").checked = false;
+            }}>Shop</a>
+            <a href="/about" class:active={$page.url.pathname === '/about'} on:click={() => {
+                document.getElementById("hamburger-checkbox").checked = false;
+            }}>About</a>
         </nav>
     </div>
     <nav>
