@@ -3,6 +3,7 @@
     import {supabaseClient} from '$lib/supabase';
     import {invalidateAll} from '$app/navigation';
     import Header from "$lib/components/Header.svelte";
+    import {Toaster} from "svelte-french-toast";
 
     onMount(() => {
         const {
@@ -16,6 +17,7 @@
     });
 </script>
 
+<Toaster />
 <Header />
 <slot />
 
