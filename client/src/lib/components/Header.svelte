@@ -104,6 +104,7 @@
     .hamburger-menu > nav > a {
         font-size: 2rem;
         padding-inline: 2rem;
+        padding-block: 0.5rem;
     }
 
     @media (max-width: 800px) {
