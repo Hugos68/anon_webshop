@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="added padding to the header">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/+layout.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/signup/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/signup/+page.svelte" afterDir="false" />
-    </list>
+    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Put toasts and toast style in global variable" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="+layout.svelte" />
-        <option value="TypeScript File" />
         <option value="Header" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -69,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1671639515285</updated>
       <workItem from="1671639516656" duration="10580000" />
-      <workItem from="1671713607012" duration="6618000" />
+      <workItem from="1671713607012" duration="6939000" />
     </task>
     <task id="LOCAL-00001" summary="Init setup">
       <created>1671640040681</created>
@@ -155,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671719547600</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Put toasts and toast style in global variable">
+      <created>1671720506271</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671720506271</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +176,7 @@
     <MESSAGE value="login page and header styling" />
     <MESSAGE value="button hovering pointer cursor" />
     <MESSAGE value="added padding to the header" />
-    <option name="LAST_COMMIT_MESSAGE" value="added padding to the header" />
+    <MESSAGE value="Put toasts and toast style in global variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put toasts and toast style in global variable" />
   </component>
 </project>
