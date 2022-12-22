@@ -3,12 +3,23 @@
 </script>
 
 <header>
-    <label for="checkbox" class="hamburger">
-        <svg width="32px" height="32px" viewBox="0 0 18 18" style="color: var(--accent-color)">
+    <input type="checkbox" id="hamburger-checkbox">
+    <label for="hamburger-checkbox" class="hamburger-icon">
+        <svg class="stripes" width="32px" height="32px" viewBox="0 0 18 18" style="color: var(--accent-color)">
             <path fill="#494c4e" d="M17 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2z"/>
         </svg>
+        <svg class="cross" width="32px" height="32px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path fill="#494c4e" d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+        </svg>
     </label>
-    <input type="checkbox" id="checkbox">
+
+    <div class="hamburger-menu">
+        <nav>
+            <a href="/home">Home</a>
+            <a href="/shop">Shop</a>
+            <a href="/about">About</a>
+        </nav>
+    </div>
     <nav>
         <div class="nav-left">
             <a href="/home">Home</a>
@@ -24,13 +35,13 @@
             {/if}
         </div>
     </nav>
-
 </header>
 
 
 
 <style>
     header {
+        z-index: 1;
         padding-inline: 2rem;
         background-color: var(--background-color);
         box-shadow: 0 0 0.25rem 0.25rem;
@@ -38,7 +49,7 @@
         align-items: center;
     }
 
-    nav {
+    header > nav {
         min-height: var(--nav-height);
         width: 100vw;
         display: flex;
@@ -47,30 +58,74 @@
         gap: 0.5rem;
     }
 
-    header > nav > div > a {
+    a {
         padding: 0.5em;
         font-size: 1.5rem;
         color: var(--accent-color);
     }
 
-    .hamburger {
+    #hamburger-checkbox {
+        z-index: 3;
+        display: none;
+    }
+
+    .hamburger-icon {
+        z-index: 3;
         cursor: pointer;
         display: none;
     }
 
-    #checkbox {
-        display: none;
+    .stripes, .cross {
+        top: 2.75rem;
+        position: absolute;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .hamburger-menu {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 17.5rem;
+        height: 100vh;
+        background-color: var(--lighter-background-color);
+        transform: translateX(-100%);
+        transition: all 0.25s ease-in-out;
+        box-shadow: 0 0 0.1rem 0.25rem;
+    }
+
+    .hamburger-menu > nav {
+        display: flex;
+        flex-direction: column;
+        margin-top: var(--nav-height);
+
+    }
+
+    .hamburger-menu > nav > a {
+        font-size: 2rem;
+        padding-left: 2rem;
     }
 
     @media (max-width: 800px) {
-        header > nav > div > a {
+        header > nav > .nav-left {
             display: none;
         }
-        .hamburger {
+        header > nav {
+            justify-content: flex-end;
+        }
+        .hamburger-icon {
             display: block;
         }
-        #checkbox:checked ~ nav {
-            background-color: red;
+        #hamburger-checkbox:checked ~ .hamburger-menu {
+            transform: translateX(0%);
+        }
+        #hamburger-checkbox:checked ~ .hamburger-icon > .stripes {
+            opacity: 0;
+            transform: rotate(360deg);
+        }
+        #hamburger-checkbox:not(:checked) ~ .hamburger-icon > .cross {
+            opacity: 0;
+            transform: rotate(-360deg);
         }
     }
 </style>

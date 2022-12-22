@@ -23,6 +23,7 @@
     :global(:root) {
         --nav-height: 7.5rem;
         --background-color: #121212;
+        --lighter-background-color: #191919;
         --accent-color: #dadada
     }
 
