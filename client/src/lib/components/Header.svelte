@@ -79,7 +79,7 @@
     .hamburger, .cross {
         top: 2.75rem;
         position: absolute;
-        transition: all 0.25s ease-in-out;
+        transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
     }
 
     .hamburger-menu {
@@ -92,7 +92,7 @@
         height: 100vh;
         background-color: var(--lighter-background-color);
         transform: translateX(-100%);
-        transition: all 0.25s ease-in-out;
+        transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
     }
 
     .hamburger-menu > nav {
