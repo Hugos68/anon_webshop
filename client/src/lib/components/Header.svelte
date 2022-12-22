@@ -86,8 +86,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 17.5rem;
-        max-width: 80vw;
+        width: 20em;
+        max-width: 75vw;
         height: 100vh;
         background-color: var(--lighter-background-color);
         transform: translateX(-100%);
