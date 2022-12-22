@@ -5,11 +5,11 @@
 <header>
     <input type="checkbox" id="hamburger-checkbox">
     <label for="hamburger-checkbox" class="hamburger-icon">
-        <svg class="stripes" width="32px" height="32px" viewBox="0 0 18 18" style="color: var(--accent-color)">
-            <path fill="#494c4e" d="M17 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2z"/>
+        <svg class="stripes" width="32px" height="32px" viewBox="0 0 18 18" fill="currentColor">
+            <path d="M17 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2z"/>
         </svg>
-        <svg class="cross" width="32px" height="32px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-            <path fill="#494c4e" d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+        <svg class="cross" width="32px" height="32px" viewBox="0 0 16 16"  fill="currentColor">
+            <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
         </svg>
     </label>
 
@@ -73,6 +73,7 @@
         z-index: 3;
         cursor: pointer;
         display: none;
+        color: var(--accent-color);
     }
 
     .stripes, .cross {
