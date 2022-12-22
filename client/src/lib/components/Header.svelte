@@ -5,7 +5,7 @@
 <header>
     <input type="checkbox" id="hamburger-checkbox">
     <label for="hamburger-checkbox" class="hamburger-icon">
-        <svg class="stripes" width="32px" height="32px" viewBox="0 0 18 18" fill="currentColor">
+        <svg class="hamburger" width="32px" height="32px" viewBox="0 0 18 18" fill="currentColor">
             <path d="M17 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2z"/>
         </svg>
         <svg class="cross" width="32px" height="32px" viewBox="0 0 16 16"  fill="currentColor">
@@ -76,7 +76,7 @@
         color: var(--accent-color);
     }
 
-    .stripes, .cross {
+    .hamburger, .cross {
         top: 2.75rem;
         position: absolute;
         transition: all 0.25s ease-in-out;
@@ -120,7 +120,7 @@
         #hamburger-checkbox:checked ~ .hamburger-menu {
             transform: translateX(0%);
         }
-        #hamburger-checkbox:checked ~ .hamburger-icon > .stripes {
+        #hamburger-checkbox:checked ~ .hamburger-icon > .hamburger {
             opacity: 0;
             transform: rotate(360deg);
         }
