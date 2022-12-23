@@ -100,7 +100,7 @@
         width: 20em;
         max-width: 75vw;
         height: 100vh;
-        background-color: var(--lighter-background-color);
+        background-color: var(--background-color);
         transform: translateX(-100%);
         transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
     }
