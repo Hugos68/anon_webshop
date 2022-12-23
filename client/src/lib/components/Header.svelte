@@ -87,7 +87,7 @@
     }
 
     .hamburger, .cross {
-        top: calc(var(--nav-height)/8 * 3);
+        top: calc(var(--nav-height)/8 * 2.75);
         position: absolute;
         transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
     }
