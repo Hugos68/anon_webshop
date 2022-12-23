@@ -9,9 +9,6 @@
 </main>
 
 <style>
-    main {
-        margin-top: 12.5vh;
-    }
     h1 {
         text-align: center;
     }

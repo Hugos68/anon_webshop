@@ -47,6 +47,9 @@
 
 <style>
     header {
+        position: fixed;
+        top: 0;
+        left: 0;
         z-index: 997;
         padding-inline: 2rem;
         background-color: var(--background-color);
@@ -56,7 +59,7 @@
     }
 
     header > nav {
-        width: 100vw;
+        min-width: calc(100vw - 4rem);
         min-height: var(--nav-height);
         display: flex;
         align-items: center;
