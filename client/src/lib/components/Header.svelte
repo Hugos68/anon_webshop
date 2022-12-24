@@ -2,6 +2,7 @@
     import {page} from "$app/stores";
 </script>
 
+
 <header>
     <input type="checkbox" id="hamburger-checkbox">
     <label for="hamburger-checkbox" class="hamburger-icon">
@@ -47,7 +48,7 @@
 
 <style>
     header {
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         z-index: 997;

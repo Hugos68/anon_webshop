@@ -6,6 +6,12 @@
     let {products} = data;
     let search = "";
     let priceRange = [0, 10000];
+
+    async function filter() {
+        products.forEach(product => {
+            const searchArea = product.description + product.title;
+        });
+    }
 </script>
 
 <main>
@@ -59,7 +65,6 @@
                     <p class="price">${product.price}</p>
                     <button class="add-to-card-button">Add to card</button>
                 </div>
-
             </div>
         {/each}
     </div>
@@ -72,7 +77,7 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
-
+        padding-inline: 2rem;
     }
     .top-header {
         display: flex;
@@ -96,6 +101,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .filter-banner > div > .price-range {
+        width: 20rem;
     }
     .products {
         margin-inline: auto;
