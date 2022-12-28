@@ -1,17 +1,26 @@
 <script>
     import {flip} from "svelte/animate";
     import Slider from '@bulatdashiev/svelte-slider';
+    import {createSearchStore, searchHandler} from "$lib/stores/search.ts";
+    import {onDestroy} from "svelte";
 
     export let data;
-    let {products} = data;
     let search = "";
     let priceRange = [0, 10000];
 
-    async function filter() {
-        products.forEach(product => {
-            const searchArea = product.description + product.title;
-        });
-    }
+    const searchProducts = data.products.map((product) => ({
+        ...product,
+        searchTerms: `${product.title} ${product.description} ${product.brand} ${product.category}`
+
+    }));
+
+    const searchStore = createSearchStore(searchProducts);
+
+    const unsubscribe = searchStore.subscribe((model) => searchHandler(model));
+
+    onDestroy(() => {
+        unsubscribe();
+    })
 </script>
 
 <main>
@@ -35,21 +44,26 @@
         </div>
         <div class="search">
             <p>Search:</p>
-            <input class="search-bar" placeholder="Example: Christmas presents..." type="search" bind:value={search}>
+            <input class="search-bar" placeholder="Example: Christmas presents..." type="search" bind:value={$searchStore.search}>
         </div>
     </div>
     <div class="products">
-        {#each products as product (product.id)}
-            <div class="product-listing" animate:flip={{duration:500}}>
-                <p class="title">{product.title}</p>
-                <img loading="lazy" src="{product.thumbnail}" alt='{product.title.replace(" ", "_")}_image'>
-                <p class="description">{product.description}</p>
-                <div class="price-card-container">
-                    <p class="price">${product.price}</p>
-                    <button class="add-to-card-button">Add to card</button>
+        {#if $searchStore.filtered.length > 0}
+            {#each $searchStore.filtered as product (product.id)}
+                <div class="product-listing" animate:flip={{duration:500}}>
+                    <p class="title">{product.title}</p>
+                    <img loading="lazy" src="{product.thumbnail}" alt='{product.title.replace(" ", "_")}_image'>
+                    <p class="description">{product.description}</p>
+                    <div class="price-card-container">
+                        <p class="price">${product.price}</p>
+                        <button class="add-to-card-button">Add to card</button>
+                    </div>
                 </div>
-            </div>
-        {/each}
+            {/each}
+        {:else}
+            <p class="no-results">No results</p>
+        {/if}
+
     </div>
 </main>
 
@@ -94,6 +108,9 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
         gap: 3rem;
+    }
+    .no-results {
+        font-size: 2rem;
     }
     .product-listing {
         display: flex;
