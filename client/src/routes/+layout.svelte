@@ -25,9 +25,6 @@
 
 
 <style>
-    :global(main) {
-        margin-top: var(--nav-height);
-    }
     :global(:root) {
         --nav-height: 6rem;
         --background-color: #121212;

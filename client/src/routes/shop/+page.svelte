@@ -64,11 +64,12 @@
 
 <style>
     main {
+        margin-top: 5vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 10vh;
         padding-inline: 2rem;
     }
     .top-header {
@@ -86,7 +87,7 @@
         align-items: center;
         max-height: 10rem;
         max-width: 75vw;
-        gap: 10vw;
+        gap: 2rem;
     }
     .filter-banner > div {
         display: flex;
