@@ -25,6 +25,9 @@
 
 
 <style>
+    :global(main) {
+        margin-block: 5vh;
+    }
     :global(:root) {
         --nav-height: 6rem;
         --background-color: #121212;

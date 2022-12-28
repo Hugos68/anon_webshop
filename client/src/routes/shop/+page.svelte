@@ -21,6 +21,10 @@
     });
 
     const maxPrice = $searchStore.priceRange[1];
+
+    const addToShoppingCart = async (product) => {
+        // TODO: Add product to shopping cart
+    }
 </script>
 
 <main>
@@ -42,29 +46,33 @@
             <Slider class="test" max="{maxPrice}" step="10" range bind:value={$searchStore.priceRange}/>
         </div>
     </div>
-    <div class="products">
+    <div class="product-section">
         {#if $searchStore.filtered.length > 0}
-            {#each $searchStore.filtered as product (product.id)}
-                <div class="product-listing" animate:flip={{duration:250}}>
-                    <p class="title">{product.title}</p>
-                    <img loading="lazy" src="{product.thumbnail}" alt='{product.title.replace(" ", "_")}_image'>
-                    <p class="description">{product.description}</p>
-                    <div class="price-card-container">
-                        <p class="price">${product.price}</p>
-                        <button class="add-to-card-button">Add to card</button>
-                    </div>
-                </div>
-            {/each}
-        {:else}
-            <p class="no-results">No results</p>
+            <p>Showing {$searchStore.filtered.length}/{$searchStore.data.length} products</p>
         {/if}
-
+        <div class="products">
+            {#if $searchStore.filtered.length > 0}
+                {#each $searchStore.filtered as product (product.id)}
+                    <div class="product-listing" animate:flip={{duration:250}}>
+                        <p class="title">{product.title}</p>
+                        <img loading="lazy" src="{product.thumbnail}" alt='{product.title.replace(" ", "_")}_image'>
+                        <p class="description">{product.description}</p>
+                        <div class="price-card-container">
+                            <p class="price">${product.price}</p>
+                            <button class="add-to-card-button" on:click={addToShoppingCart(product)}>Add to cart</button>
+                        </div>
+                    </div>
+                {/each}
+            {:else}
+                <p class="no-results">No results</p>
+            {/if}
+        </div>
     </div>
+
 </main>
 
 <style>
     main {
-        margin-top: 5vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -99,13 +107,16 @@
     .search > input {
         width: 15rem;
     }
+    .product-section > p {
+        text-align: center;
+    }
     .products {
         margin-inline: auto;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         gap: 3rem;
-        width: 100%;
+        max-width: 100%;
     }
     .no-results {
         font-size: 2rem;
@@ -115,7 +126,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: start;
-        width: min-content;
+        max-width: min-content;
         padding: 1rem;
         border: var(--accent-color) solid 0.1rem;
         border-radius: 1.5rem;
@@ -143,7 +154,7 @@
     }
     .product-listing > img {
         max-height: 10rem;
-        max-width: inherit;
+        width: available;
         filter: brightness(75%);
         border-radius: 1rem;
     }

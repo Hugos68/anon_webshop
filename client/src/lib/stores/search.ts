@@ -13,7 +13,7 @@ export const createSearchStore = (data : object) => {
 export const filterHandler = (store:any) => {
     const searchTerm = store.search.toLowerCase() || "";
     store.filtered = store.data.filter((item:any) => {
-        const includesSearchTerm = item.searchTerms.toLowerCase().includes(searchTerm);
+        const includesSearchTerm = item.searchTerms.toLowerCase().trim().includes(searchTerm.trim());
         const withinPriceRange = item.price > store.priceRange[0] && item.price < store.priceRange[1];
         return includesSearchTerm && withinPriceRange;
     });
