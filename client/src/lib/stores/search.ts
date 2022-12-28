@@ -1,7 +1,6 @@
-import {writable} from "svelte/store";
+import { writable} from "svelte/store";
 
-
-export const createSearchStore = (data) => {
+export const createSearchStore = (data : object) => {
     const { subscribe, set, update } = writable({
         data: data,
         filtered: data,
@@ -10,9 +9,9 @@ export const createSearchStore = (data) => {
     return { subscribe, set, update };
 }
 
-export const searchHandler = (store) => {
+export const searchHandler = (store:any) => {
     const searchTerm = store.search.toLowerCase() || "";
-    store.filtered = store.data.filter((item) => {
+    store.filtered = store.data.filter((item:any) => {
         return item.searchTerms.toLowerCase().includes(searchTerm);
     });
 }
