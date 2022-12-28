@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Working search filter">
-      <change beforePath="$PROJECT_DIR$/client/src/app.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app.d.ts" afterDir="false" />
+    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="cleanup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/lib/stores/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/stores/search.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/shop/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/shop/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,7 @@
       <workItem from="1671639516656" duration="10580000" />
       <workItem from="1671713607012" duration="6939000" />
       <workItem from="1671732023163" duration="341000" />
-      <workItem from="1672245723334" duration="4500000" />
+      <workItem from="1672245723334" duration="8329000" />
     </task>
     <task id="LOCAL-00001" summary="Init setup">
       <created>1671640040681</created>
@@ -207,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672251457778</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="cleanup">
+      <created>1672251964907</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1672251964907</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +241,7 @@
     <MESSAGE value="Shop styling" />
     <MESSAGE value="Moved shopping cart to header and made it a logged in only feature" />
     <MESSAGE value="Working search filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working search filter" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
 </project>

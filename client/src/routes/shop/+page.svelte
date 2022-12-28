@@ -1,26 +1,26 @@
 <script>
     import {flip} from "svelte/animate";
     import Slider from '@bulatdashiev/svelte-slider';
-    import {createSearchStore, searchHandler} from "$lib/stores/search.ts";
+    import {createSearchStore, filterHandler} from "$lib/stores/search.ts";
     import {onDestroy} from "svelte";
 
     export let data;
-    let search = "";
-    let priceRange = [0, 10000];
 
     const searchProducts = data.products.map((product) => ({
         ...product,
-        searchTerms: `${product.title} ${product.description} ${product.brand} ${product.category}`
-
+        ...product,
+        searchTerms: `${product.title} ${product.description} ${product.brand} ${product.category}`,
     }));
 
     const searchStore = createSearchStore(searchProducts);
 
-    const unsubscribe = searchStore.subscribe((model) => searchHandler(model));
+    const unsubscribe = searchStore.subscribe((model) => filterHandler(model));
 
     onDestroy(() => {
         unsubscribe();
-    })
+    });
+
+    const maxPrice = $searchStore.priceRange[1];
 </script>
 
 <main>
@@ -33,24 +33,19 @@
         </div>
     </div>
     <div class="filter-banner">
-        <div class="filter-section">
-            <p>Filter:</p>
-            <div class="price-range">
-                <p>Price range:</p>
-                <Slider max="10000" step="10" range bind:value={priceRange}/>
-                <p>${priceRange[0]} - ${priceRange[1]}</p>
-            </div>
-
-        </div>
         <div class="search">
             <p>Search:</p>
             <input class="search-bar" placeholder="Example: Christmas presents..." type="search" bind:value={$searchStore.search}>
+        </div>
+        <div class="price-range">
+            <p>Price range: ${$searchStore.priceRange[0]} - ${$searchStore.priceRange[1]}</p>
+            <Slider class="test" max="{maxPrice}" step="10" range bind:value={$searchStore.priceRange}/>
         </div>
     </div>
     <div class="products">
         {#if $searchStore.filtered.length > 0}
             {#each $searchStore.filtered as product (product.id)}
-                <div class="product-listing" animate:flip={{duration:500}}>
+                <div class="product-listing" animate:flip={{duration:250}}>
                     <p class="title">{product.title}</p>
                     <img loading="lazy" src="{product.thumbnail}" alt='{product.title.replace(" ", "_")}_image'>
                     <p class="description">{product.description}</p>
@@ -98,9 +93,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 15rem;
     }
-    .filter-banner > div > .price-range {
-        width: 20rem;
+    .search > input {
+        width: 15rem;
     }
     .products {
         margin-inline: auto;
@@ -108,6 +104,7 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
         gap: 3rem;
+        width: 100%;
     }
     .no-results {
         font-size: 2rem;
@@ -149,5 +146,9 @@
         filter: brightness(75%);
         border-radius: 1rem;
     }
-
+    @media (max-width: 800px) {
+        .filter-banner {
+            flex-direction: column;
+        }
+    }
 </style>
