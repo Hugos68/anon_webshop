@@ -39,7 +39,7 @@
     <div class="filter-banner">
         <div class="search">
             <p>Search:</p>
-            <input class="search-bar" placeholder="Example: Christmas presents..." type="search" bind:value={$searchStore.search}>
+            <input class="search-bar" placeholder="Example: Flying Wooden Bird..." type="search" bind:value={$searchStore.search}>
         </div>
         <div class="price-range">
             <p>Price range: ${$searchStore.priceRange[0]} - ${$searchStore.priceRange[1]}</p>
@@ -49,23 +49,21 @@
     <div class="product-section">
         {#if $searchStore.filtered.length > 0}
             <p>Showing {$searchStore.filtered.length}/{$searchStore.data.length} products</p>
+        {:else}
+            <p>No results matching your search criteria</p>
         {/if}
         <div class="products">
-            {#if $searchStore.filtered.length > 0}
-                {#each $searchStore.filtered as product (product.id)}
-                    <div class="product-listing" animate:flip={{duration:250}}>
-                        <p class="title">{product.title}</p>
-                        <img loading="lazy" src="{product.thumbnail}" alt='{product.title.replace(" ", "_")}_image'>
-                        <p class="description">{product.description}</p>
-                        <div class="price-card-container">
-                            <p class="price">${product.price}</p>
-                            <button class="add-to-card-button" on:click={addToShoppingCart(product)}>Add to cart</button>
-                        </div>
+            {#each $searchStore.filtered as product (product.id)}
+                <div class="product-listing" animate:flip={{duration:250}}>
+                    <p class="title">{product.title}</p>
+                    <img loading="lazy" src="{product.thumbnail}" alt='{product.title.replace(" ", "_")}_image'>
+                    <p class="description">{product.description}</p>
+                    <div class="price-card-container">
+                        <p class="price">${product.price}</p>
+                        <button class="add-to-card-button" on:click={addToShoppingCart(product)}>Add to cart</button>
                     </div>
-                {/each}
-            {:else}
-                <p class="no-results">No results</p>
-            {/if}
+                </div>
+            {/each}
         </div>
     </div>
 
