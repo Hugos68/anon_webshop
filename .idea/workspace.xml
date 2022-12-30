@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="No results is now part of the &quot;showing x/x products&quot; div">
+    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Added github and discord providers, added good styling for scalability and content, added home screen stuff from old subjective project">
+      <change afterPath="$PROJECT_DIR$/client/static/butterfly-pose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/static/slow-down-pose-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/static/slow-down-pose.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/lib/stores/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/stores/search.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/+layout.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/routes/home/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/home/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/login/+page.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/login/+page.server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/shop/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/shop/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/signup/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/signup/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/hugok/Documents/Personal/anon_webshop/client/src/routes/cart",
+    "last_opened_file_path": "C:/Users/hugok/IdeaProjects/anon_webshop/client/static",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,12 +54,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hugok\IdeaProjects\anon_webshop\client\static" />
       <recent name="C:\Users\hugok\Documents\Personal\anon_webshop\client\src\routes\cart" />
       <recent name="C:\Users\hugok\Documents\Personal\anon_webshop\client\src\routes\shop" />
       <recent name="C:\Users\hugok\IdeaProjects\anon_webshop\client\src\routes\signup" />
-      <recent name="C:\Users\hugok\IdeaProjects\anon_webshop\client\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hugok\IdeaProjects\anon_webshop\client\static" />
       <recent name="C:\Users\hugok\Documents\Personal\anon_webshop\client\src\routes" />
       <recent name="C:\Users\hugok\IdeaProjects\anon_webshop\client\src" />
       <recent name="C:\Users\hugok\IdeaProjects\anon_webshop" />
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672266891103</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added github and discord providers, added good styling for scalability and content, added home screen stuff from old subjective project">
+      <created>1672410915201</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1672410915201</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +269,7 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="Implemented price range filtering" />
     <MESSAGE value="Fixed weird scaling on phone devices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed weird scaling on phone devices" />
+    <MESSAGE value="Added github and discord providers, added good styling for scalability and content, added home screen stuff from old subjective project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added github and discord providers, added good styling for scalability and content, added home screen stuff from old subjective project" />
   </component>
 </project>
