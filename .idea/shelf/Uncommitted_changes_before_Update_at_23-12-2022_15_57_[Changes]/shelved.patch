@@ -1,0 +1,73 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"ec87903d-d203-4caf-948b-2e55a6f171bc\" name=\"Changes\" comment=\"Put toasts and toast style in global variable\">\r\n      <change beforePath=\"$PROJECT_DIR$/client/src/lib/components/Header.svelte\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/client/src/lib/components/Header.svelte\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"+layout.svelte\" />\r\n        <option value=\"Header\" />\r\n        <option value=\"TypeScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2JENvnSwFiOfVjf1oGwFabp5qDh\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/hugok/IdeaProjects/anon_webshop/client/src/routes/signup&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,\r\n    &quot;ts.external.directory.path&quot;: &quot;C:\\\\Users\\\\hugok\\\\Documents\\\\Personal\\\\anon_webshop\\\\client\\\\node_modules\\\\typescript\\\\lib&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\hugok\\IdeaProjects\\anon_webshop\\client\\src\\routes\\signup\" />\r\n      <recent name=\"C:\\Users\\hugok\\IdeaProjects\\anon_webshop\\client\\static\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\hugok\\IdeaProjects\\anon_webshop\\client\\src\" />\r\n      <recent name=\"C:\\Users\\hugok\\IdeaProjects\\anon_webshop\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"ec87903d-d203-4caf-948b-2e55a6f171bc\" name=\"Changes\" comment=\"\" />\r\n      <created>1671639515285</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1671639515285</updated>\r\n      <workItem from=\"1671639516656\" duration=\"10580000\" />\r\n      <workItem from=\"1671713607012\" duration=\"6939000\" />\r\n      <workItem from=\"1671732023163\" duration=\"341000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Init setup\">\r\n      <created>1671640040681</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671640040681</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Semi working auth\">\r\n      <created>1671649641933</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671649641933</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Successfuly build hamburger menu\">\r\n      <created>1671716026616</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671716026616</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"responsive hamburger menu\">\r\n      <created>1671716095518</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671716095518</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Better sizing for hamburger menu\">\r\n      <created>1671716418121</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671716418121</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"matching padding inside hamburger with padding from header\">\r\n      <created>1671716482260</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671716482260</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Fixed coloring of stripes and cross\">\r\n      <created>1671716668577</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671716668577</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"changed name of stripes svg to hamburger\">\r\n      <created>1671716699607</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671716699607</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Sign up and login now stack when the screen becomes small enough\">\r\n      <created>1671717465073</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671717465073</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"login page and header styling\">\r\n      <created>1671718610578</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671718610578</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"button hovering pointer cursor\">\r\n      <created>1671719411418</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671719411418</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"added padding to the header\">\r\n      <created>1671719547600</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671719547600</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Put toasts and toast style in global variable\">\r\n      <created>1671720506271</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671720506271</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"14\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Init setup\" />\r\n    <MESSAGE value=\"Semi working auth\" />\r\n    <MESSAGE value=\"Successfuly build hamburger menu\" />\r\n    <MESSAGE value=\"responsive hamburger menu\" />\r\n    <MESSAGE value=\"Better sizing for hamburger menu\" />\r\n    <MESSAGE value=\"matching padding inside hamburger with padding from header\" />\r\n    <MESSAGE value=\"Fixed coloring of stripes and cross\" />\r\n    <MESSAGE value=\"changed name of stripes svg to hamburger\" />\r\n    <MESSAGE value=\"Sign up and login now stack when the screen becomes small enough\" />\r\n    <MESSAGE value=\"login page and header styling\" />\r\n    <MESSAGE value=\"button hovering pointer cursor\" />\r\n    <MESSAGE value=\"added padding to the header\" />\r\n    <MESSAGE value=\"Put toasts and toast style in global variable\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Put toasts and toast style in global variable\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 01c02b84dee7e01bb7a3fa2972ee3de1a17ab647)
++++ b/.idea/workspace.xml	(date 1671806344468)
+@@ -4,9 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Put toasts and toast style in global variable">
+-      <change beforePath="$PROJECT_DIR$/client/src/lib/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/lib/components/Header.svelte" afterDir="false" />
+-    </list>
++    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="TODO fix signup&#10;aligned some text" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -18,6 +16,7 @@
+         <option value="+layout.svelte" />
+         <option value="Header" />
+         <option value="TypeScript File" />
++        <option value="+error.svelte" />
+       </list>
+     </option>
+   </component>
+@@ -43,7 +42,7 @@
+     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+     &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\hugok\\Documents\\Personal\\anon_webshop\\client\\node_modules\\typescript\\lib&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\hugok\\IdeaProjects\\anon_webshop\\client\\node_modules\\typescript\\lib&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
+@@ -68,6 +67,8 @@
+       <workItem from="1671639516656" duration="10580000" />
+       <workItem from="1671713607012" duration="6939000" />
+       <workItem from="1671732023163" duration="341000" />
++      <workItem from="1671738638600" duration="312000" />
++      <workItem from="1671806341304" duration="2000" />
+     </task>
+     <task id="LOCAL-00001" summary="Init setup">
+       <created>1671640040681</created>
+@@ -160,7 +161,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1671720506271</updated>
+     </task>
+-    <option name="localTasksCounter" value="14" />
++    <task id="LOCAL-00014" summary="TODO fix signup&#10;aligned some text">
++      <created>1671738948968</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1671738948968</updated>
++    </task>
++    <option name="localTasksCounter" value="15" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -180,6 +188,7 @@
+     <MESSAGE value="button hovering pointer cursor" />
+     <MESSAGE value="added padding to the header" />
+     <MESSAGE value="Put toasts and toast style in global variable" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Put toasts and toast style in global variable" />
++    <MESSAGE value="TODO fix signup&#10;aligned some text" />
++    <option name="LAST_COMMIT_MESSAGE" value="TODO fix signup&#10;aligned some text" />
+   </component>
+ </project>
+\ No newline at end of file
