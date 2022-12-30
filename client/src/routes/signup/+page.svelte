@@ -41,6 +41,9 @@
         display: flex;
         flex-direction: column;
     }
+    form > label {
+        margin-top: 1rem;
+    }
     form > button {
         margin-top: 2.5rem;
     }

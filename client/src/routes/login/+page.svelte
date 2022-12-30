@@ -26,6 +26,7 @@
         <input type="password" id="password" name="password">
         <button type="submit">Login</button>
     </form>
+    <p>Third part login:</p>
     <form class="provider-form" method="POST" use:enhance>
         <div>
             <button formaction="?/login&provider=google">
@@ -55,6 +56,9 @@
         display: flex;
         flex-direction: column;
     }
+    form > label {
+        margin-top: 1rem;
+    }
     form > button {
         margin-top: 2.5rem;
     }
@@ -63,7 +67,8 @@
         justify-content: space-evenly;
     }
     .provider-form > div > button {
-        padding: 0.5rem;
+        padding: 1rem;
         min-width: unset;
+        border-radius: 25%;
     }
 </style>

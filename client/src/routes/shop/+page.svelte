@@ -3,9 +3,9 @@
     import Slider from '@bulatdashiev/svelte-slider';
     import {createSearchStore, filterHandler} from "$lib/stores/search.ts";
     import {onDestroy} from "svelte";
-    import {cart, addProductToCart} from "$lib/stores/cart.ts";
     import toast from "svelte-french-toast";
     import {TOAST_STYLE} from "../../app_constants.ts";
+    import {cart} from "$lib/stores/cart.ts";
 
     export let data;
 
@@ -25,13 +25,12 @@
 
     const maxPrice = $searchStore.priceRange[1];
 
-    const addToShoppingCart = async (product) => {
+    const addToShoppingCart = (product) => {
         if (!data.session) {
             toast.error("You must be logged in before purchasing products");
             return;
         }
-        // TODO: Add product to shopping cart
-        addProductToCart(product);
+        cart.addProduct(product);
         toast.success('Item added to cart', TOAST_STYLE);
     }
 </script>
