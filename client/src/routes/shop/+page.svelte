@@ -26,6 +26,10 @@
     const maxPrice = $searchStore.priceRange[1];
 
     const addToShoppingCart = async (product) => {
+        if (!data.session) {
+            toast.error("You must be logged in before purchasing products");
+            return;
+        }
         // TODO: Add product to shopping cart
         addProductToCart(product);
         toast.success('Item added to cart', TOAST_STYLE);

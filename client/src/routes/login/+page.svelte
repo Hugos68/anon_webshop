@@ -10,7 +10,8 @@
                 toast.success('Successfully logged in!', TOAST_STYLE);
             }
             else {
-                toast.error(result.error, TOAST_STYLE);
+                console.log(result)
+                toast.error(result.data.message, TOAST_STYLE);
             }
         };
     }

@@ -7,6 +7,7 @@ export const load: PageServerLoad = async ({locals}) => {
     if (!productsResponse.ok) throw redirect(302, '/home');
 
     return {
-        products: (await productsResponse.json())['products']
+        products: (await productsResponse.json())['products'],
+        session: locals.session
     }
 }

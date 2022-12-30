@@ -1,31 +1,48 @@
 import {writable} from "svelte/store";
+import type {Writable} from "svelte/store";
 
-interface cartitem {
-    itemId: number,
+interface CartItem {
+    id: number
     quantity:number
 }
 
+interface Product {
+    id: number
+    title: string
+    description: string
+    price: number
+    discountPercentage: number
+    rating: number
+    stock: number
+    brand: string
+    category: string
+    thumbnail: string,
+    images: []
+}
+
 // TODO 1: Make this store persistent
-// TODO 2: Types for this script
 
-export const cart =  writable([]);
+export const cart: Writable<CartItem[]> = writable([]);
 
-export const addProductToCart = (product) => {
-    let cartItems = [];
+export const addProductToCart = (product: Product) => {
+    let cartItems: CartItem[] = [];
     cart.subscribe(cart => {
         cartItems = cart;
     })
+    let itemAlreadyExists;
     cartItems.forEach((cartItem) => {
         if (cartItem.id === product.id) {
-            cartItem.quanity+=1;
+            cartItem.quantity+=1;
+            console.log(cartItem);
             cart.set(cartItems);
-            return;
+            itemAlreadyExists= true;
         }
     });
-    cartItems.push({
-        id: product.id,
-        quanity: 1,
-    });
-    cart.set(cartItems);
-    console.log(cartItems);
+    if (!itemAlreadyExists) {
+        cartItems.push({
+            id: product.id,
+            quantity: 1,
+        });
+        cart.set(cartItems);
+    }
 }
