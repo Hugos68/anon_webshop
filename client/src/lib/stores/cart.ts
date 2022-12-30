@@ -11,20 +11,21 @@ interface cartitem {
 export const cart =  writable([]);
 
 export const addProductToCart = (product) => {
-
     let cartItems = [];
     cart.subscribe(cart => {
         cartItems = cart;
     })
-    let itemFound
     cartItems.forEach((cartItem) => {
         if (cartItem.id === product.id) {
             cartItem.quanity+=1;
+            cart.set(cartItems);
+            return;
         }
     });
-    if (!itemFound) cartItems.push({
+    cartItems.push({
         id: product.id,
         quanity: 1,
     });
     cart.set(cartItems);
+    console.log(cartItems);
 }

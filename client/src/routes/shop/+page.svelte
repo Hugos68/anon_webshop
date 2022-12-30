@@ -4,6 +4,8 @@
     import {createSearchStore, filterHandler} from "$lib/stores/search.ts";
     import {onDestroy} from "svelte";
     import {cart, addProductToCart} from "$lib/stores/cart.ts";
+    import toast from "svelte-french-toast";
+    import {TOAST_STYLE} from "../../app_constants.ts";
 
     export let data;
 
@@ -25,7 +27,8 @@
 
     const addToShoppingCart = async (product) => {
         // TODO: Add product to shopping cart
-        addProductToCart($cart, product);
+        addProductToCart(product);
+        toast.success('Item added to cart', TOAST_STYLE);
     }
 </script>
 
@@ -117,9 +120,6 @@
         flex-wrap: wrap;
         gap: 3rem;
         max-width: 100%;
-    }
-    .no-results {
-        font-size: 2rem;
     }
     .product-listing {
         display: flex;
