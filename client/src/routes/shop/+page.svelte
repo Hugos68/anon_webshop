@@ -81,7 +81,6 @@
         justify-content: center;
         align-items: center;
         gap: 10vh;
-        padding-inline: 2rem;
     }
     .top-header {
         display: flex;
