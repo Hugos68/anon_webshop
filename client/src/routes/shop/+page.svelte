@@ -3,6 +3,7 @@
     import Slider from '@bulatdashiev/svelte-slider';
     import {createSearchStore, filterHandler} from "$lib/stores/search.ts";
     import {onDestroy} from "svelte";
+    import {cart, addProductToCart} from "$lib/stores/cart.ts";
 
     export let data;
 
@@ -24,6 +25,7 @@
 
     const addToShoppingCart = async (product) => {
         // TODO: Add product to shopping cart
+        addProductToCart($cart, product);
     }
 </script>
 
