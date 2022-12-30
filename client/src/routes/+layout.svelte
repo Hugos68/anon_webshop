@@ -25,8 +25,11 @@
 
 
 <style>
-    :global(main) {
-        margin-block: 5vh;
+    @font-face {
+        font-family: poppins;
+        src: url(Poppins-Regular.ttf);
+        font-weight: bold;
+        font-style: normal;
     }
     :global(:root) {
         --nav-height: 6rem;
@@ -35,14 +38,18 @@
         --accent-color: #dadada;
         --darker-accent-color: #bcbcbc;
     }
-
-    @font-face {
-        font-family: poppins;
-        src: url(Poppins-Regular.ttf);
-        font-weight: bold;
-        font-style: normal;
+    :global(body) {
+        min-height: 100vh;
+        margin: 0;
+        background-color: var(--background-color);
+        font-family: poppins, serif;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
-
+    :global(main) {
+        margin-block: 5vh;
+        margin-inline: 5vw;
+    }
     :global(a) {
         text-decoration: none;
     }
@@ -50,12 +57,7 @@
         color: var(--accent-color);
     }
 
-    :global(body) {
-        min-height: 100vh;
-        margin: 0;
-        background-color: var(--background-color);
-        font-family: poppins, serif;
-    }
+
 
     :global(label) {
         color: var(--accent-color);
@@ -72,7 +74,6 @@
     }
     :global(input:focus) {
         outline:none;
-        border-radius: 0.75rem;
     }
     :global(button:hover) {
         cursor: pointer;

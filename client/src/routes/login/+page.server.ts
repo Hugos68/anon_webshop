@@ -1,5 +1,5 @@
 import type {Actions} from "./$types";
-import {AuthApiError} from "@supabase/supabase-js";
+import {AuthApiError, type Provider} from "@supabase/supabase-js";
 import {fail, redirect} from "@sveltejs/kit";
 import type {PageServerLoad} from "./$types";
 
@@ -8,8 +8,22 @@ export const load: PageServerLoad = async ({locals}) => {
 }
 
 export const actions: Actions = {
-    login: async ({request, locals}) => {
+    login: async ({request, locals, url}) => {
         const body = Object.fromEntries(await request.formData());
+
+        const provider = url.searchParams.get("provider") as Provider;
+
+        if (provider) {
+            const {data, error: err } = await locals.sb.auth.signInWithOAuth({
+                provider: provider
+            });
+            if (err) {
+                return fail(400, {
+                    message: 'Something went wrong'
+                });
+            }
+            throw redirect(303, data.url);
+        }
 
         const {data, error: err} = await locals.sb.auth.signInWithPassword({
             email: body.email as string,

@@ -16,7 +16,6 @@
     }
 </script>
 
-
 <main>
     <h1>Sign up</h1>
     <form action="?/signup" method="POST" use:enhance={handleSignup}>
@@ -32,10 +31,13 @@
     main {
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         align-items: center;
         margin-top: 12.5vh;
+        gap: 2rem;
     }
     form {
+        width: 20rem;
         display: flex;
         flex-direction: column;
     }
