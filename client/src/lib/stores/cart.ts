@@ -10,43 +10,32 @@ const createCart = () => {
     return {
         subscribe,
         addProduct: (product: Product) => {
-            const tempCart = get(cart);
-            let productAlreadyInCart;
-            tempCart.forEach((cartItem: CartItem) => {
-                if (cartItem.productId===product.id) {
-                    cartItem.quantity+=1;
-                    productAlreadyInCart = true;
-                }
+            const cartItems = get(cart);
+            const cartItem = cartItems.find(cartItem => {
+                if (cartItem.productId===product.id) return cartItem;
             });
-            if (!productAlreadyInCart)  {
-                tempCart.push({
-                    productId: product.id,
-                    quantity : 1,
-                });
-            }
-            set(tempCart);
+            if (cartItem) cartItem.quantity++;
+            else cartItems.push({productId : product.id, quantity : 1});
+            set(cartItems);
         },
         removeProduct: (product: Product) => {
-            const tempCart = get(cart);
-            tempCart.forEach((cartItem: CartItem) => {
-                if (cartItem.productId===product.id) {
-                    tempCart.splice(tempCart.indexOf(cartItem, 1));
-                    return;
+            const cartItems = get(cart);
+            const filteredCartItems = cartItems.filter(cartItem => {
+                if (cartItem.productId!==product.id) return true;
+                else if (cartItem.quantity===1) return false;
+                else if (cartItem.quantity>1) {
+                    cartItem.quantity--;
+                    return true;
                 }
-            });
-            set(tempCart);
+            })
+            set(filteredCartItems);
         },
         quantity: () => {
-            if (get(cart).length < 1) return 0;
-            get(cart).reduce((acc, item) => {
-                acc.quantity+=item.quantity
-                return acc;
-            });
-            let quantity: number = 0;
+            let totalQuantity: number = 0;
             get(cart).forEach((item) => {
-                quantity+=item.quantity;
+                totalQuantity+=item.quantity;
             });
-            return quantity;
+            return totalQuantity;
         }
     };
 }
