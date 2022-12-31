@@ -27,7 +27,7 @@
 
     const addToShoppingCart = (product) => {
         if (!data.session) {
-            toast.error("You must be logged in before purchasing products");
+            toast.error('You must be logged in before purchasing products', TOAST_STYLE);
             return;
         }
         cart.addProduct(product);
