@@ -12,16 +12,16 @@ const createCart = () => {
         addProduct: (product: Product) => {
             const cartItems = get(cart);
             const cartItem = cartItems.find(cartItem => {
-                if (cartItem.productId===product.id) return cartItem;
+                if (cartItem.product.id===product.id) return cartItem;
             });
             if (cartItem) cartItem.quantity++;
-            else cartItems.push({productId : product.id, quantity : 1});
+            else cartItems.push({product : product, quantity : 1});
             set(cartItems);
         },
         removeProduct: (product: Product) => {
             const cartItems = get(cart);
             const filteredCartItems = cartItems.filter(cartItem => {
-                if (cartItem.productId!==product.id) return true;
+                if (cartItem.product.id!==product.id) return true;
                 else if (cartItem.quantity===1) return false;
                 else if (cartItem.quantity>1) {
                     cartItem.quantity--;
@@ -36,6 +36,14 @@ const createCart = () => {
                 totalQuantity+=item.quantity;
             });
             return totalQuantity;
+        },
+        price: () => {
+            let totalPrice: number = 0;
+            get(cart).forEach((item) => {
+                totalPrice+=(item.product.price * item.quantity);
+            });
+            console.log(totalPrice);
+            return totalPrice;
         }
     };
 }

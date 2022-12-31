@@ -74,7 +74,6 @@
             {/each}
         </div>
     </div>
-
 </main>
 
 <style>

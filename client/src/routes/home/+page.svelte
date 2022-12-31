@@ -14,6 +14,7 @@
 <style>
     main {
         display: flex;
+        justify-content: center;
     }
     h1 {
         font-size: 6rem;
@@ -21,6 +22,5 @@
     }
     img {
         max-width: 35vw;
-        margin-left: auto;
     }
 </style>
