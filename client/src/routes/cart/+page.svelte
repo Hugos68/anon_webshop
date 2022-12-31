@@ -13,11 +13,15 @@
         </div>
     </div>
 {/each}
-{#key $cart}
-    <div>
+<div class="total-checkout-container">
+    {#key $cart}
         <p>Total: ${cart.price()}</p>
-    </div>
-{/key}
+        <button disabled="{cart.price()===0}">Checkout</button>
+    {/key}
+
+</div>
+
+
 
 <style>
     .title {
@@ -34,8 +38,8 @@
     }
     .quantity-controls > button {
         min-width: unset;
-        width: 2rem;
-        height: 2rem;
+        width: 1.75rem;
+        height: 1.75rem;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -47,6 +51,16 @@
     }
     .add {
         background-color: #99ff99;
+    }
+    .total-checkout-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .total-checkout-container > button {
+
+    }
+    .total-checkout-container > button:disabled {
+
     }
 
 </style>

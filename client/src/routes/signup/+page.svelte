@@ -16,7 +16,7 @@
     }
 </script>
 
-<main>
+<div class="wrapper">
     <h1>Sign up</h1>
     <form action="?/signup" method="POST" use:enhance={handleSignup}>
         <label for="email">Email</label>
@@ -25,10 +25,10 @@
         <input type="password" id="password" name="password">
         <button type="submit">Sign up</button>
     </form>
-</main>
+</div>
 
 <style>
-    main {
+    .wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;

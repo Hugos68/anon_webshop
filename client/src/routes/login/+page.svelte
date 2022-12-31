@@ -17,7 +17,7 @@
     }
 </script>
 
-<main>
+<div class="wrapper">
     <h1>Login</h1>
     <form action="?/login" method="POST" use:enhance={handleLogin}>
         <label for="email">Email</label>
@@ -26,7 +26,7 @@
         <input type="password" id="password" name="password">
         <button type="submit">Login</button>
     </form>
-    <p>Third part login:</p>
+    <p>Third-party login:</p>
     <form class="provider-form" method="POST" use:enhance>
         <div>
             <button formaction="?/login&provider=google">
@@ -39,11 +39,12 @@
             </button>
         </div>
     </form>
+</div>
 
-</main>
+
 
 <style>
-    main {
+    .wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;

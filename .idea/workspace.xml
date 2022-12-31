@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Added github and discord providers, added good styling for scalability and content, added home screen stuff from old subjective project">
-      <change afterPath="$PROJECT_DIR$/client/static/butterfly-pose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/slow-down-pose-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/slow-down-pose.png" afterDir="false" />
+    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="using update to avoid get, set hell inside cart store">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/home/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/home/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/cart/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/cart/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/shop/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/shop/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,24 +32,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/hugok/IdeaProjects/anon_webshop/client/static",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.rails.projectView.checked": "true",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
-    "ts.external.directory.path": "C:\\Users\\hugok\\IdeaProjects\\anon_webshop\\client\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hugok/IdeaProjects/anon_webshop/client/static&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\hugok\\Documents\\Personal\\anon_webshop\\client\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hugok\IdeaProjects\anon_webshop\client\static" />
@@ -78,6 +76,7 @@
       <workItem from="1671713607012" duration="6939000" />
       <workItem from="1671732023163" duration="341000" />
       <workItem from="1672245723334" duration="10386000" />
+      <workItem from="1672480635052" duration="1126000" />
     </task>
     <task id="LOCAL-00001" summary="Init setup">
       <created>1671640040681</created>
@@ -240,16 +239,48 @@
       <option name="project" value="LOCAL" />
       <updated>1672410915201</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added types for cart">
+      <created>1672421294380</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1672421294380</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Successfully implemented custom store for shopping cart">
+      <created>1672441429069</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1672441429069</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Finally finished shopping cart logic, you can now add and delete products">
+      <created>1672447406089</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1672447406089</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Shopping cart styling and functionality added">
+      <created>1672449554197</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1672449554197</updated>
+    </task>
+    <task id="LOCAL-00028" summary="using update to avoid get, set hell inside cart store">
+      <created>1672480877238</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1672480877239</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init setup" />
-    <MESSAGE value="Semi working auth" />
-    <MESSAGE value="Successfuly build hamburger menu" />
     <MESSAGE value="responsive hamburger menu" />
     <MESSAGE value="Better sizing for hamburger menu" />
     <MESSAGE value="matching padding inside hamburger with padding from header" />
@@ -270,6 +301,11 @@
     <MESSAGE value="Implemented price range filtering" />
     <MESSAGE value="Fixed weird scaling on phone devices" />
     <MESSAGE value="Added github and discord providers, added good styling for scalability and content, added home screen stuff from old subjective project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added github and discord providers, added good styling for scalability and content, added home screen stuff from old subjective project" />
+    <MESSAGE value="Added types for cart" />
+    <MESSAGE value="Successfully implemented custom store for shopping cart" />
+    <MESSAGE value="Finally finished shopping cart logic, you can now add and delete products" />
+    <MESSAGE value="Shopping cart styling and functionality added" />
+    <MESSAGE value="using update to avoid get, set hell inside cart store" />
+    <option name="LAST_COMMIT_MESSAGE" value="using update to avoid get, set hell inside cart store" />
   </component>
 </project>

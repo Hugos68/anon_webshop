@@ -35,7 +35,7 @@
     }
 </script>
 
-<main>
+<div class="wrapper">
     <div class="top-header">
         <h1>Products</h1>
         <div class="catchy-text">
@@ -74,10 +74,10 @@
             {/each}
         </div>
     </div>
-</main>
+</div>
 
 <style>
-    main {
+    .wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -147,6 +147,13 @@
         padding: 0.5rem;
         border: lightgreen solid 0.25rem;
         border-radius: 1.5rem;
+        transition: transform 0.1s ease-in-out;
+    }
+    .product-listing > .price-card-container > .add-to-card-button:hover {
+        transform: scale(104%);
+    }
+    .product-listing > .price-card-container > .add-to-card-button:active {
+        transform: scale(98%);
     }
     .price-card-container {
         margin-top: auto;
