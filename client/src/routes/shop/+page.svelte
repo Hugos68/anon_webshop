@@ -3,9 +3,9 @@
     import Slider from '@bulatdashiev/svelte-slider';
     import {createSearchStore, filterHandler} from "$lib/stores/search.ts";
     import {onDestroy} from "svelte";
-    import {cart, addProductToCart} from "$lib/stores/cart.ts";
     import toast from "svelte-french-toast";
     import {TOAST_STYLE} from "../../app_constants.ts";
+    import {cart} from "$lib/stores/cart.ts";
 
     export let data;
 
@@ -25,14 +25,17 @@
 
     const maxPrice = $searchStore.priceRange[1];
 
-    const addToShoppingCart = async (product) => {
-        // TODO: Add product to shopping cart
-        addProductToCart(product);
+    const addToShoppingCart = (product) => {
+        if (!data.session) {
+            toast.error('You must be logged in before purchasing products', TOAST_STYLE);
+            return;
+        }
+        cart.addProduct(product);
         toast.success('Item added to cart', TOAST_STYLE);
     }
 </script>
 
-<main>
+<div class="wrapper">
     <div class="top-header">
         <h1>Products</h1>
         <div class="catchy-text">
@@ -71,11 +74,10 @@
             {/each}
         </div>
     </div>
-
-</main>
+</div>
 
 <style>
-    main {
+    .wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -144,6 +146,13 @@
         padding: 0.5rem;
         border: lightgreen solid 0.25rem;
         border-radius: 1.5rem;
+        transition: transform 0.1s ease-in-out;
+    }
+    .product-listing > .price-card-container > .add-to-card-button:hover {
+        transform: scale(104%);
+    }
+    .product-listing > .price-card-container > .add-to-card-button:active {
+        transform: scale(98%);
     }
     .price-card-container {
         margin-top: auto;

@@ -57,8 +57,6 @@
         color: var(--accent-color);
     }
 
-
-
     :global(label) {
         color: var(--accent-color);
     }

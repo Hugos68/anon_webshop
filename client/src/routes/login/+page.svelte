@@ -10,13 +10,14 @@
                 toast.success('Successfully logged in!', TOAST_STYLE);
             }
             else {
-                toast.error(result.error, TOAST_STYLE);
+                console.log(result)
+                toast.error(result.data.message, TOAST_STYLE);
             }
         };
     }
 </script>
 
-<main>
+<div class="wrapper">
     <h1>Login</h1>
     <form action="?/login" method="POST" use:enhance={handleLogin}>
         <label for="email">Email</label>
@@ -25,6 +26,7 @@
         <input type="password" id="password" name="password">
         <button type="submit">Login</button>
     </form>
+    <p>Third-party login:</p>
     <form class="provider-form" method="POST" use:enhance>
         <div>
             <button formaction="?/login&provider=google">
@@ -37,11 +39,12 @@
             </button>
         </div>
     </form>
+</div>
 
-</main>
+
 
 <style>
-    main {
+    .wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -54,6 +57,9 @@
         display: flex;
         flex-direction: column;
     }
+    form > label {
+        margin-top: 1rem;
+    }
     form > button {
         margin-top: 2.5rem;
     }
@@ -62,7 +68,8 @@
         justify-content: space-evenly;
     }
     .provider-form > div > button {
-        padding: 0.5rem;
+        padding: 1rem;
         min-width: unset;
+        border-radius: 25%;
     }
 </style>

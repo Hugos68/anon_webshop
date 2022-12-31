@@ -1,31 +1,51 @@
-import {writable} from "svelte/store";
-
-interface cartitem {
-    itemId: number,
-    quantity:number
-}
-
+import {get, writable} from "svelte/store";
+import type {Writable} from "svelte/store";
 // TODO 1: Make this store persistent
-// TODO 2: Types for this script
 
-export const cart =  writable([]);
 
-export const addProductToCart = (product) => {
-    let cartItems = [];
-    cart.subscribe(cart => {
-        cartItems = cart;
-    })
-    cartItems.forEach((cartItem) => {
-        if (cartItem.id === product.id) {
-            cartItem.quanity+=1;
-            cart.set(cartItems);
-            return;
+const createCart = () => {
+    const cart: Writable<CartItem[]> = writable([]);
+    const {subscribe, update}: Writable<CartItem[]> = cart;
+
+    return {
+        subscribe,
+        addProduct: (product: Product) => {
+            update(cartItems => {
+                const cartItem = cartItems.find(cartItem => {
+                    if (cartItem.product.id===product.id) return cartItem;
+                });
+                if (cartItem) cartItem.quantity++;
+                else cartItems.push({product : product, quantity : 1});
+                return cartItems;
+            });
+        },
+        removeProduct: (product: Product) => {
+            update(cartItems => {
+                    return cartItems.filter(cartItem => {
+                        if (cartItem.product.id !== product.id) return true;
+                        else if (cartItem.quantity === 1) return false;
+                        else if (cartItem.quantity > 1) {
+                            cartItem.quantity--;
+                            return true;
+                        }
+                    })
+            });
+        },
+        quantity: () => {
+            let totalQuantity: number = 0;
+            get(cart).forEach((item) => {
+                totalQuantity+=item.quantity;
+            });
+            return totalQuantity;
+        },
+        price: () => {
+            let totalPrice: number = 0;
+            get(cart).forEach((item) => {
+                totalPrice+=(item.product.price * item.quantity);
+            });
+            return totalPrice;
         }
-    });
-    cartItems.push({
-        id: product.id,
-        quanity: 1,
-    });
-    cart.set(cartItems);
-    console.log(cartItems);
+    };
 }
+
+export const cart = createCart();
