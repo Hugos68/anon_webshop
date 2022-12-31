@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="using update to avoid get, set hell inside cart store">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ec87903d-d203-4caf-948b-2e55a6f171bc" name="Changes" comment="Toast styling">
       <change beforePath="$PROJECT_DIR$/client/src/routes/cart/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/cart/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/login/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/shop/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/shop/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <workItem from="1671713607012" duration="6939000" />
       <workItem from="1671732023163" duration="341000" />
       <workItem from="1672245723334" duration="10386000" />
-      <workItem from="1672480635052" duration="1126000" />
+      <workItem from="1672480635052" duration="1469000" />
     </task>
     <task id="LOCAL-00001" summary="Init setup">
       <created>1671640040681</created>
@@ -274,15 +271,27 @@
       <option name="project" value="LOCAL" />
       <updated>1672480877239</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Styling">
+      <created>1672484775759</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1672484775759</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Toast styling">
+      <created>1672484840551</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1672484840551</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="responsive hamburger menu" />
-    <MESSAGE value="Better sizing for hamburger menu" />
     <MESSAGE value="matching padding inside hamburger with padding from header" />
     <MESSAGE value="Fixed coloring of stripes and cross" />
     <MESSAGE value="changed name of stripes svg to hamburger" />
@@ -306,6 +315,8 @@
     <MESSAGE value="Finally finished shopping cart logic, you can now add and delete products" />
     <MESSAGE value="Shopping cart styling and functionality added" />
     <MESSAGE value="using update to avoid get, set hell inside cart store" />
-    <option name="LAST_COMMIT_MESSAGE" value="using update to avoid get, set hell inside cart store" />
+    <MESSAGE value="Styling" />
+    <MESSAGE value="Toast styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Toast styling" />
   </component>
 </project>

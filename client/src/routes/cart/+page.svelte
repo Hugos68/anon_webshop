@@ -13,13 +13,12 @@
         </div>
     </div>
 {/each}
-<div class="total-checkout-container">
+<form action="?/checkout" class="total-checkout-container">
     {#key $cart}
-        <p>Total: ${cart.price()}</p>
+        <label>Total: ${cart.price()}</label>
         <button disabled="{cart.price()===0}">Checkout</button>
     {/key}
-
-</div>
+</form>
 
 
 
