@@ -16,26 +16,20 @@
     }
 </script>
 
-<div class="wrapper">
-    <h1>Sign up</h1>
-    <form action="?/signup" method="POST" use:enhance={handleSignup}>
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password">
-        <button type="submit">Sign up</button>
-    </form>
-</div>
+
+<h1>Sign up</h1>
+<form action="?/signup" method="POST" use:enhance={handleSignup}>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <label for="confirm-password">Confirm password</label>
+    <input type="password" id="confirm-password" name="confirmPassword">
+    <button type="submit">Sign up</button>
+</form>
+
 
 <style>
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-top: 12.5vh;
-        gap: 2rem;
-    }
     form {
         width: 20rem;
         display: flex;

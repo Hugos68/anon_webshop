@@ -11,6 +11,12 @@ export const actions: Actions = {
     signup: async ({request, locals}) => {
         const body = Object.fromEntries(await request.formData());
 
+        if (body.password!==body.confirmPassword) {
+            return fail(400, {
+                message: 'Password mismatch'
+            });
+        }
+
         const {data, error: err} = await locals.sb.auth.signUp({
             email: body.email as string,
             password: body.password as string
@@ -26,6 +32,6 @@ export const actions: Actions = {
                 message: 'Server error. Try again later.'
             });
         }
-        throw redirect(303, '/home');
+        throw redirect(303, '/login');
     }
 }

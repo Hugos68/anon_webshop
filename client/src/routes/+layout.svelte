@@ -49,6 +49,9 @@
     :global(main) {
         margin-block: 5vh;
         margin-inline: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     :global(a) {
         text-decoration: none;
