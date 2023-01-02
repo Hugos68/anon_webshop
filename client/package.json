@@ -27,6 +27,8 @@
 	"type": "module",
 	"dependencies": {
 		"@bulatdashiev/svelte-slider": "^1.0.3",
+		"@macfja/svelte-persistent-store": "^2.2.1",
+		"@rgossiaux/svelte-headlessui": "^1.0.2",
 		"dotenv": "^16.0.3",
 		"env": "^0.0.2",
 		"svelte-french-toast": "^1.0.3"
