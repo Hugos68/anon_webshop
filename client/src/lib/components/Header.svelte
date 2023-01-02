@@ -17,27 +17,27 @@
 
     <div class="hamburger-menu">
         <nav>
-            <a href="/home" class:active={$page.url.pathname === '/home'} on:click={() => {
+            <a class="underline-animation" href="/home" class:active={$page.url.pathname === '/home'} on:click={() => {
                 document.getElementById("hamburger-checkbox").checked = false;
             }}>Home</a>
-            <a href="/shop" class:active={$page.url.pathname === '/shop'} on:click={() => {
+            <a class="underline-animation" href="/shop" class:active={$page.url.pathname === '/shop'} on:click={() => {
                 document.getElementById("hamburger-checkbox").checked = false;
             }}>Shop</a>
-            <a href="/about" class:active={$page.url.pathname === '/about'} on:click={() => {
+            <a class="underline-animation" href="/about" class:active={$page.url.pathname === '/about'} on:click={() => {
                 document.getElementById("hamburger-checkbox").checked = false;
             }}>About</a>
         </nav>
     </div>
     <nav>
         <div class="nav-left">
-            <a href="/home" class:active={$page.url.pathname === '/home'}>Home</a>
-            <a href="/shop" class:active={$page.url.pathname === '/shop'}>Shop</a>
-            <a href="/about" class:active={$page.url.pathname === '/about'}>About</a>
+            <a class="underline-animation" href="/home" class:active={$page.url.pathname === '/home'}>Home</a>
+            <a class="underline-animation" href="/shop" class:active={$page.url.pathname === '/shop'}>Shop</a>
+            <a class="underline-animation" href="/about" class:active={$page.url.pathname === '/about'}>About</a>
         </div>
         <div class="nav-right">
             {#if $page.data.session}
-                <a href="/account" class:active={$page.url.pathname === '/account'}>Account</a>
-                <a href="/cart" class="cart">
+                <a class="underline-animation" href="/account" class:active={$page.url.pathname === '/account'}>Account</a>
+                <a class="cart" href="/cart">
                     <svg width="32" height="32" viewBox="0 0 476.944 476.944" fill="var(--accent-color)">
                         <g><path d="M84.176,379.875c-26.762,0-48.535,21.772-48.535,48.534s21.772,48.534,48.535,48.534c26.762,0,48.534-21.772,48.534-48.534                           S110.938,379.875,84.176,379.875z M84.176,446.944c-10.22,0-18.535-8.314-18.535-18.534s8.314-18.534,18.535-18.534                           c10.22,0,18.534,8.314,18.534,18.534S94.396,446.944,84.176,446.944z"/><path d="M342.707,379.875c-26.762,0-48.534,21.772-48.534,48.534s21.772,48.534,48.534,48.534                           c26.762,0,48.535-21.772,48.535-48.534S369.469,379.875,342.707,379.875z M342.707,446.944c-10.22,0-18.534-8.314-18.534-18.534                           s8.314-18.534,18.534-18.534c10.22,0,18.535,8.314,18.535,18.534S352.927,446.944,342.707,446.944z"/><path d="M413.322,0l-9.835,60H1.999l28.736,175.88c4.044,24.67,26.794,43.995,51.794,43.995h284.917l-6.557,40H50.642v30h335.73                           L438.804,30h36.141V0H413.322z M372.363,249.875H82.529c-10.174,0-20.543-8.808-22.188-18.841L37.298,90h361.271L372.363,249.875z"/></g>
                     </svg>
@@ -50,8 +50,8 @@
                     {/if}
                 </a>
             {:else}
-                <a href="/signup" class:active={$page.url.pathname === '/signup'}>Sign up</a>
-                <a href="/login" class:active={$page.url.pathname === '/login'}>Log in</a>
+                <a class="underline-animation" href="/signup" class:active={$page.url.pathname === '/signup'}>Sign up</a>
+                <a class="underline-animation" href="/login" class:active={$page.url.pathname === '/login'}>Log in</a>
             {/if}
         </div>
     </nav>
@@ -102,6 +102,19 @@
         color: var(--accent-color);
     }
 
+    .underline-animation::after {
+        content: '';
+        width: inherit;
+        width: 0;
+        display: block;
+        height: 2px;
+        background-color: var(--accent-color);
+        transition: width 0.25s ease-out;
+        margin-inline: auto;
+    }
+    .underline-animation:hover::after {
+        width: 100%;
+    }
     .cart {
         position: relative;
     }
@@ -163,9 +176,9 @@
     }
 
     .hamburger-menu > nav > a {
-        font-size: 2rem;
         padding-inline: 2rem;
         padding-block: 0.5rem;
+        width: min-content;
     }
 
     @media (max-width: 800px) {
