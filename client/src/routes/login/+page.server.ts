@@ -11,6 +11,8 @@ export const actions: Actions = {
     login: async ({request, locals, url}) => {
         const body = Object.fromEntries(await request.formData());
 
+
+
         const provider = url.searchParams.get("provider") as Provider;
 
         if (provider) {
@@ -23,6 +25,14 @@ export const actions: Actions = {
                 });
             }
             throw redirect(303, data.url);
+        }
+        else if (
+            !body.email ||
+            !body.password
+        ) {
+            return fail(400, {
+                message: 'Please fill in all fields'
+            });
         }
 
         const {data, error: err} = await locals.sb.auth.signInWithPassword({

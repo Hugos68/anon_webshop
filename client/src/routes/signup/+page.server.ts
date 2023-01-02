@@ -16,6 +16,14 @@ export const actions: Actions = {
                 message: 'Password mismatch'
             });
         }
+        if (
+            !body.email ||
+            !body.password
+        ) {
+            return fail(400, {
+                message: 'Please fill in all fields'
+            });
+        }
 
         const {data, error: err} = await locals.sb.auth.signUp({
             email: body.email as string,

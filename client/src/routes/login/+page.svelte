@@ -5,12 +5,10 @@
 
     async function handleLogin() {
         return async ({ result }) => {
-            await applyAction(result);
             if (result.type === 'redirect') {
                 toast.success('Successfully logged in!', TOAST_STYLE);
             }
             else {
-                console.log(result)
                 toast.error(result.data.message, TOAST_STYLE);
             }
         };
