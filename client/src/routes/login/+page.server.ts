@@ -32,7 +32,6 @@ export const actions: Actions = {
                 message: 'Please fill in all fields'
             });
         }
-
         const {data, error: err} = await locals.sb.auth.signInWithPassword({
             email: body.email as string,
             password: body.password as string

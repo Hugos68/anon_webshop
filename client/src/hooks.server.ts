@@ -8,7 +8,5 @@ export const handle: Handle = async ({event, resolve}) => {
     event.locals.sb = supabaseClient;
     event.locals.session = session;
 
-    return resolve(event, {
-        transformPageChunk: ({html}) => html.replace(`data-theme=""`, `data-theme="dark"`)
-    });
+    return resolve(event);
 }
