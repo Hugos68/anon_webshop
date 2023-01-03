@@ -9,7 +9,7 @@
     <nav class="flex items-center justify-between min-w-full py-4">
         <input class="z-[999] hidden peer" type="checkbox" id="hamburger-checkbox">
         <label class="relative hidden md:block z-[999] mr-auto cursor-pointer text-black dark:text-slate-300 group" for="hamburger-checkbox">
-            <svg class="w-10 h-10 absolute top-[calc(6rem/8 * 2.75] group-peer-checked:opacity-0 group-peer-checked:rotate-[360deg] transition-opacity-transform duration-300 ease-in-out" viewBox="0 0 18 18" fill="currentColor">
+            <svg class="w-10 h-10 absolute [.peer:checked~.group_&]:opacity-0 [.peer:checked~.group_&]:rotate-[360deg] transition-opacity-transform duration-300 ease-in-out" viewBox="0 0 18 18" fill="currentColor">
                 <path d="M17 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2zm0 5H1a1 1 0 0 1 0-2h16a1 1 0 0 1 0 2z"/>
             </svg>
             <svg class="w-10 h-10 [.peer:not(:checked)~.group_&]:opacity-0 [.peer:not(:checked)~.group_&]:rotate-[-360deg] transition-opacity-transform duration-300 ease-in-out" viewBox="0 0 16 16"  fill="currentColor">
