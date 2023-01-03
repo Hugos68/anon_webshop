@@ -11,8 +11,6 @@ export const actions: Actions = {
     login: async ({request, locals, url}) => {
         const body = Object.fromEntries(await request.formData());
 
-
-
         const provider = url.searchParams.get("provider") as Provider;
 
         if (provider) {

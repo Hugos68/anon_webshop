@@ -14,7 +14,7 @@ export const actions: Actions = {
         if (err) {
             if (err instanceof AuthApiError && err.status === 400) {
                 return fail(400, {
-                    message: 'Unknown emai.'
+                    message: 'Unknown email'
                 });
             }
             return fail(500, {

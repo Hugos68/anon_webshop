@@ -7,7 +7,7 @@
         return async ({ result }) => {
             await applyAction(result);
             if (result.type === 'redirect') {
-                toast.success('Successfully signed up!, confirm your email to get started', TOAST_STYLE);
+                toast.success('Success! Please verify your email', TOAST_STYLE);
             }
             else {
                 toast.error(result.data.message, TOAST_STYLE);
@@ -15,7 +15,6 @@
         };
     }
 </script>
-
 
 <h1>Sign up</h1>
 <form action="?/signup" method="POST" use:enhance={handleSignup}>
