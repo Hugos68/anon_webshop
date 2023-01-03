@@ -3,24 +3,10 @@
     export let data;
 </script>
 
-<div class="wrapper">
+<main class="flex justify-center mb-5 mt-20">
     <div in:fly={{x: 200, duration: 1000}}>
-        <h1>Subjective.</h1>
-        <p in:fly={{x: 200, duration: 1500}}>Where minds <span>aren't</span> alike</p>
+        <h1 class="text-black dark:text-slate-300 text-9xl" >Subjective.</h1>
+        <p class="text-slate-300 mt-2" in:fly={{x: 200, duration: 1500}}>Where minds <span class="underline" >aren't</span> alike</p>
     </div>
-    <img in:fly={{y: 100, duration: 1250}} src="slow-down-pose-2.png" alt="slow_down_pose">
-</div>
-
-<style>
-    .wrapper {
-        display: flex;
-        justify-content: center;
-    }
-    h1 {
-        font-size: 6rem;
-        text-align: left;
-    }
-    img {
-        max-width: 35vw;
-    }
-</style>
+    <img class="max-w-2xl" in:fly={{y: 100, duration: 1250}} src="slow-down-pose-2.png" alt="slow_down_pose">
+</main>

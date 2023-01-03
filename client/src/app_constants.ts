@@ -1,4 +1,4 @@
 export const TOAST_STYLE : object = {
-    style: 'border-radius: 200px; background: var(--lighter-background-color); color: var(--accent-color);',
+    style: 'border: 1px white solid; border-radius: 200px; background :#121212 ;color: #bcbcbc;',
     position : "bottom-right"
 };
