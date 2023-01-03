@@ -19,7 +19,7 @@
     <h1 class="text-black dark:text-slate-300 text-4xl my-10">Login</h1>
     <form class="flex flex-col" action="?/login" method="POST" use:enhance={handleLogin}>
         <label class="text-black dark:text-slate-300 mt-4" for="email">Email</label>
-        <input class="focus:outline-0 p-0.5" type="text" id="email" name="email">
+        <input class="p-0.5" type="text" id="email" name="email">
         <label class="text-black dark:text-slate-300 mt-4" for="password">Password</label>
         <input class="focus:outline-0 p-0.5" type="password" id="password" name="password">
         <a class="text-black dark:text-slate-300 mt-4 text-center" href="forgot-password">Forgot Password?</a>
