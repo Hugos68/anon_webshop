@@ -19,13 +19,13 @@
 <main class="flex flex-col items-center justify-center mb-5 mt-20">
     <h1 class="text-black dark:text-slate-300 text-4xl my-10">Sign up</h1>
     <form class="flex flex-col" action="?/signup" method="POST" use:enhance={handleSignup}>
-        <label class="text-black dark:text-slate-300 mt-4" for="email">Email</label>
-        <input class="focus:outline-0 p-0.5" type="text" id="email" name="email">
-        <label class="text-black dark:text-slate-300 mt-4" for="password">Password</label>
-        <input class="focus:outline-0 p-0.5" type="password" id="password" name="password">
-        <label class="text-black dark:text-slate-300 mt-4"  for="confirm-password">Confirm password</label>
-        <input class="focus:outline-0 p-0.5" type="password" id="confirm-password" name="confirmPassword">
-        <button class="mt-8 border-2 p-2 text-black dark:text-slate-300" type="submit">Sign up</button>
+        <label class="mt-4 mb-2" for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <label class="mt-4 mb-2" for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <label class="mt-4 mb-2"  for="confirm-password">Confirm password</label>
+        <input type="password" id="confirm-password" name="confirmPassword">
+        <button class="btn-primary mt-16" type="submit">Sign up</button>
     </form>
 </main>
 

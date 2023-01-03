@@ -1,10 +1,11 @@
 <script lang="ts">
     import {page} from "$app/stores";
     import {cart} from "$lib/stores/cart.ts";
+    import { LightSwitch } from '@skeletonlabs/skeleton';
 </script>
 
 
-<header class="bg-white dark:bg-zinc-800 sticky h-20 top-0 left-0 z-[997] px-[5vw] drop-shadow-md flex items-center">
+<header class="bg-lightBackground2 dark:bg-darkBackground2 sticky h-20 top-0 left-0 z-[997] px-[5vw] drop-shadow-md flex items-center">
 
     <nav class="flex items-center justify-between min-w-full py-4">
         <input class="z-[999] hidden peer" type="checkbox" id="hamburger-checkbox">
@@ -18,21 +19,21 @@
         </label>
         <div class="md:peer-checked:translate-x-0 md:peer:checked:drop-shadow-sm bg-white dark:bg-zinc-800 z-[998] absolute top-0 left-0 w-[20em] max-w-[75vw] min-h-[100vh] translate-x-[-100%] transition-transform ease-in-out duration-200">
             <nav class="ml-8 mt-[6rem] flex flex-col gap-5 text-black dark:text-slate-300 text-2xl">
-                <a class="after:content-* after:bg-black after:dark:bg-slate-300 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out py-1 w-min" href="/home" class:active={$page.url.pathname === '/home'} on:click={() => {
+                <a class="after:content-* after:bg-lightAccent2 after:dark:bg-darkAccent2 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out py-1 w-min" href="/home" class:active={$page.url.pathname === '/home'} on:click={() => {
                 document.getElementById("hamburger-checkbox").checked = false;
             }}>Home</a>
-                <a class="after:content-* after:bg-black after:dark:bg-slate-300 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out py-1 w-min" href="/shop" class:active={$page.url.pathname === '/shop'} on:click={() => {
+                <a class="after:content-* after:bg-lightAccent2 after:dark:bg-darkAccent2 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out py-1 w-min" href="/shop" class:active={$page.url.pathname === '/shop'} on:click={() => {
                 document.getElementById("hamburger-checkbox").checked = false;
             }}>Shop</a>
-                <a class="after:content-* after:bg-black after:dark:bg-slate-300 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out py-1 w-min" href="/about" class:active={$page.url.pathname === '/about'} on:click={() => {
+                <a class="after:content-* after:bg-lightAccent2 after:dark:bg-darkAccent2 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out py-1 w-min" href="/about" class:active={$page.url.pathname === '/about'} on:click={() => {
                 document.getElementById("hamburger-checkbox").checked = false;
             }}>About</a>
             </nav>
         </div>
         <div class="flex items-center justify-center gap-5 text-black dark:text-slate-300 text-2xl md:hidden">
-            <a class="[.active]:bg-red after:content-* after:bg-black after:dark:bg-slate-300 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out" href="/home" class:active={$page.url.pathname === '/home'}>Home</a>
-            <a class="after:content-* after:bg-black after:dark:bg-slate-300 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out" href="/shop" class:active={$page.url.pathname === '/shop'}>Shop</a>
-            <a class="after:content-* after:bg-black after:dark:bg-slate-300 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out" href="/about" class:active={$page.url.pathname === '/about'}>About</a>
+            <a class="[.active]:bg-red after:content-* after:bg-lightAccent2 after:dark:bg-darkAccent2 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out" href="/home" class:active={$page.url.pathname === '/home'}>Home</a>
+            <a class="after:content-* after:bg-lightAccent2 after:dark:bg-darkAccent2 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out" href="/shop" class:active={$page.url.pathname === '/shop'}>Shop</a>
+            <a class="after:content-* after:bg-lightAccent2 after:dark:bg-darkAccent2 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out" href="/about" class:active={$page.url.pathname === '/about'}>About</a>
         </div>
         <div class="flex items-center justify-center gap-5 text-black dark:text-slate-300 text-2xl ">
             {#if $page.data.session}
@@ -50,8 +51,8 @@
                     <svg class="w-8 h-8" viewBox="0 0 30.586 30.586" fill="currentColor"><g transform="translate(-546.269 -195.397)"><path d="M572.138,221.245a15.738,15.738,0,0,0-21.065-.253l-1.322-1.5a17.738,17.738,0,0,1,23.741.28Z"/><path d="M561.464,204.152a4.96,4.96,0,1,1-4.96,4.96,4.966,4.966,0,0,1,4.96-4.96m0-2a6.96,6.96,0,1,0,6.96,6.96,6.96,6.96,0,0,0-6.96-6.96Z"/><path d="M561.562,197.4a13.293,13.293,0,1,1-13.293,13.293A13.308,13.308,0,0,1,561.562,197.4m0-2a15.293,15.293,0,1,0,15.293,15.293A15.293,15.293,0,0,0,561.562,195.4Z"/></g></svg>
                 </a>
             {:else}
-                <a class="after:content-* after:bg-black after:dark:bg-slate-300 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out" href="/signup" class:active={$page.url.pathname === '/signup'}>Sign up</a>
-                <a class="after:content-* after:bg-black after:dark:bg-slate-300 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out" href="/login" class:active={$page.url.pathname === '/login'}>Log in</a>
+                <a class="after:content-* after:bg-lightAccent2 after:dark:bg-darkAccent2 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out" href="/signup" class:active={$page.url.pathname === '/signup'}>Sign up</a>
+                <a class="after:content-* after:bg-lightAccent2 after:dark:bg-darkAccent2 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out" href="/login" class:active={$page.url.pathname === '/login'}>Log in</a>
             {/if}
         </div>
     </nav>

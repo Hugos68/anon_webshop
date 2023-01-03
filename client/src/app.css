@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@layer base {
+    input {
+        @apply input;
+    }
+    label, a, p, h1, h2, h3 {
+        @apply text-lightAccent dark:text-darkAccent;
+    }
+    button {
+        @apply btn;
+    }
+}
+
 a.active:after {
     width: 100%;
 }
