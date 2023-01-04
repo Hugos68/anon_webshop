@@ -20,6 +20,6 @@
 
 <Toaster />
 <Header />
-<main class="flex justify-center mb-5 mt-20">
+<main class="flex justify-center px-5 pt-20 w-screen">
     <slot />
 </main>

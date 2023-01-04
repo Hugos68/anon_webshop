@@ -13,12 +13,15 @@ module.exports = {
     screens: {
       '2xl': {'max': '1500px'},
       'xl': {'max': '1250px'},
-      'lg': {'max': '100px'},
+      'lg': {'max': '1000px'},
       'md': {'max': '800px'},
       'sm': {'max': '600px'},
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+      require("daisyui"),
+      require('@tailwindcss/line-clamp')
+  ],
   daisyui: {
     themes: [
       {

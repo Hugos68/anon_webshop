@@ -52,7 +52,7 @@
 
     <div class="mx-auto flex justify-evenly flex-wrap gap-6">
         {#each $searchStore.filtered as product (product.id)}
-            <div in:fly={{delay : product.id*50}} class="card w-96 bg-primary shadow-xl" animate:flip={{duration: 250}}>
+            <div in:fly={{delay : product.id*50}} class="card max-w-[25rem] bg-primary shadow-xl" animate:flip={{duration: 250}}>
                 <figure class="w"><img src="{product.thumbnail}" alt="Shoes" /></figure>
                 <div class="badge badge-secondary m-6">{product.category}</div>
                 <div class="card-body">
