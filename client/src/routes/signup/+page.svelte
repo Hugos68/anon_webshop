@@ -16,7 +16,7 @@
     }
 </script>
 
-<main class="flex flex-col items-center justify-center mb-5 mt-20">
+<main class="flex flex-col justify-center items-center">
     <h1 class="text-black dark:text-slate-300 text-4xl my-10">Sign up</h1>
     <form class="flex flex-col" action="?/signup" method="POST" use:enhance={handleSignup}>
         <label class="mt-4 mb-2" for="email">Email</label>
@@ -25,7 +25,7 @@
         <input type="password" id="password" name="password">
         <label class="mt-4 mb-2"  for="confirm-password">Confirm password</label>
         <input type="password" id="confirm-password" name="confirmPassword">
-        <button class="btn-primary mt-16" type="submit">Sign up</button>
+        <button class="btn btn-primary mt-16" type="submit">Sign up</button>
     </form>
 </main>
 
