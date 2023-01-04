@@ -1,5 +1,6 @@
 <script>
     import {flip} from "svelte/animate";
+    import {fly} from "svelte/transition";
     import {createSearchStore, filterHandler} from "$lib/stores/search.ts";
     import {onDestroy} from "svelte";
     import toast from "svelte-french-toast";
@@ -51,8 +52,8 @@
 
     <div class="mx-auto flex justify-evenly flex-wrap gap-6">
         {#each $searchStore.filtered as product (product.id)}
-            <div class="card w-96 bg-primary shadow-xl" animate:flip={{duration: 250}}>
-                <figure><img src="{product.thumbnail}" alt="Shoes" /></figure>
+            <div in:fly={{delay : product.id*50}} class="card w-96 bg-primary shadow-xl" animate:flip={{duration: 250}}>
+                <figure class="w"><img src="{product.thumbnail}" alt="Shoes" /></figure>
                 <div class="badge badge-secondary m-6">{product.category}</div>
                 <div class="card-body">
                     <h2 class="card-title">{product.title}</h2>

@@ -1,11 +1,18 @@
 <script lang="ts">
     import {page} from "$app/stores";
     import {enhance} from "$app/forms";
+    import type {SubmitFunction} from  "$app/forms";
     import {cart} from "$lib/stores/cart.ts";
     let theme = $page.data.theme;
     const toggleTheme = () => {
         if (theme==="dark") theme="light";
         else theme="dark";
+    }
+    const submitUpdateTheme: SubmitFunction = ({action}) => {
+        const theme = action.searchParams.get('theme');
+        if (theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+        }
     }
 </script>
 
@@ -60,13 +67,13 @@
                             <a class="btn btn-primary text-transform capitalize font-semibold " href="/account" class:active={$page.url.pathname === '/account'}>My Account</a>
                         </li>
                         <li>
-                            <form class="p-0" action="/?/setTheme&theme={theme}" method="POST" use:enhance>
-                                <button class="btn btn-primary h-full w-full text-transform capitalize" on:click={toggleTheme} type="submit">Theme: {theme.charAt(0).toUpperCase()+theme.slice(1)}</button>
+                            <form class="p-0" method="POST" use:enhance={submitUpdateTheme}>
+                                <button formaction="/?/setTheme&theme={theme}" class="btn btn-primary h-full w-full text-transform capitalize" on:click={toggleTheme} type="submit">Theme: {theme.charAt(0).toUpperCase()+theme.slice(1)}</button>
                             </form>
                         </li>
                         <li>
-                            <form class="p-0" action="/logout" method="POST" use:enhance>
-                                <button class="btn hover:bg-red-900 w-[100%] font-semibold bg-red-500 text-transform capitalize" type="submit">Logout</button>
+                            <form class="p-0" action="/logout" method="POST">
+                                <button class="btn border-0 hover:bg-red-900 w-[100%] font-semibold bg-red-500 text-transform capitalize" type="submit">Logout</button>
                             </form>
                         </li>
                     </ul>

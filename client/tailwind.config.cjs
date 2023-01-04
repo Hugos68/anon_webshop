@@ -9,6 +9,7 @@ module.exports = {
         w : 'width',
       }
     },
+    darkMode : 'class',
     screens: {
       '2xl': {'max': '1500px'},
       'xl': {'max': '1250px'},

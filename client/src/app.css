@@ -15,7 +15,7 @@
 
 @layer components {
     .underline-animation {
-        @apply after:content-[''] after:bg-base-100 after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out;
+        @apply after:content-[''] after:bg-accent after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out;
     }
 
     .underline-animation.active:after {
