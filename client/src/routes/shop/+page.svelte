@@ -35,7 +35,7 @@
     }
 </script>
 
-<div class="wrapper">
+<main>
     <div class="top-header">
         <h1>Products</h1>
         <div class="catchy-text">
@@ -74,10 +74,10 @@
             {/each}
         </div>
     </div>
-</div>
+</main>
 
 <style>
-    .wrapper {
+    main {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -126,7 +126,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: start;
+        align-items: flex-start;
         max-width: min-content;
         padding: 1rem;
         border: var(--accent-color) solid 0.1rem;

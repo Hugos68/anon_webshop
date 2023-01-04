@@ -1,11 +1,15 @@
 <script lang="ts">
     import {page} from "$app/stores";
     import {cart} from "$lib/stores/cart.ts";
+    let theme = "Dark";
+    const toggleTheme = () => {
+        if (theme==="Dark") theme="Light";
+        else theme="Dark";
+    }
 </script>
 
 
 <header class="bg-lightBackground2 dark:bg-darkBackground2 sticky h-20 top-0 left-0 z-[997] px-[5vw] drop-shadow-md flex items-center">
-
     <nav class="flex items-center justify-between min-w-full py-4">
         <input class="z-[999] hidden peer" type="checkbox" id="hamburger-checkbox">
         <label class="w-8 h-8 relative hidden md:block z-[999] mr-auto cursor-pointer text-black dark:text-slate-300 group" for="hamburger-checkbox">
@@ -51,15 +55,17 @@
                     <label tabindex="0" class="btn btn-circle btn-ghost text-lightAccent2 dark:text-darkAccent2">
                         <svg class="w-8 h-8 " viewBox="0 0 30.586 30.586" fill="currentColor"><g transform="translate(-546.269 -195.397)"><path d="M572.138,221.245a15.738,15.738,0,0,0-21.065-.253l-1.322-1.5a17.738,17.738,0,0,1,23.741.28Z"/><path d="M561.464,204.152a4.96,4.96,0,1,1-4.96,4.96,4.966,4.966,0,0,1,4.96-4.96m0-2a6.96,6.96,0,1,0,6.96,6.96,6.96,6.96,0,0,0-6.96-6.96Z"/><path d="M561.562,197.4a13.293,13.293,0,1,1-13.293,13.293A13.308,13.308,0,0,1,561.562,197.4m0-2a15.293,15.293,0,1,0,15.293,15.293A15.293,15.293,0,0,0,561.562,195.4Z"/></g></svg>
                     </label>
-                    <ul tabindex="0" class="dropdown-content text-lg menu p-2 border border-solid rounded-box w-max bg-lightBackground dark:bg-darkBackground">
+                    <ul tabindex="0" class="dropdown-content gap-2 text-lg menu p-2 border border-solid rounded-box w-[10rem] bg-lightBackground dark:bg-darkBackground">
                         <li>
                             <a href="/account" class:active={$page.url.pathname === '/account'}>My Account</a>
                         </li>
-                        <li>
-                            <p>Theme: </p>
+                        <li on:click={toggleTheme}>
+                            <p>Theme: {theme}</p>
                         </li>
                         <li>
-                            <a class="text-red dark:text-red" href="/logout" >Logout</a>
+                            <form class="p-0" action="/logout" method="POST">
+                                <button class="hover:bg-red-900 w-[100%] text-black font-semibold bg-red-600" type="submit">Logout</button>
+                            </form>
                         </li>
                     </ul>
                 </div>
