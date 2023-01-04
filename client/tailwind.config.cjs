@@ -3,19 +3,11 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{svelte,html,js,ts}"],
   theme: {
-    darkMode : 'class',
-    colors : colors,
     extend: {
-      colors : {
-        lightBackground : "#e8e8e8",
-        lightBackground2 : "#dedede",
-        lightAccent : "#000000",
-        lightAccent2: "#121212",
-        darkBackground : "#121212",
-        darkBackground2 : "#202020",
-        darkAccent : "#ffffff",
-        darkAccent2 : "#f8f8f8"
-      },
+      content: '',
+      transitionProperty: {
+        w : 'width',
+      }
     },
     screens: {
       '2xl': {'max': '1500px'},
@@ -26,4 +18,33 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          "primary": "#202020",
+          "secondary": "#121212",
+          "accent": "#ffffff",
+          "neutral": "#f8f8f8",
+          "base-100": "#ffffff",
+          "info": "#ffffff",
+          "success": "#ffffff",
+          "warning": "#ffffff",
+          "error": "#ffffff",
+        },
+        light: {
+          "primary": "#dedede",
+          "secondary": "#e8e8e8",
+          "accent": "#000000",
+          "neutral": "#121212",
+          "base-100": "#ffffff",
+          "info": "#ffffff",
+          "success": "#ffffff",
+          "warning": "#ffffff",
+          "error": "#ffffff",
+        },
+      }
+    ],
+  },
 }
+

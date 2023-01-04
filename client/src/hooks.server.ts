@@ -8,5 +8,15 @@ export const handle: Handle = async ({event, resolve}) => {
     event.locals.sb = supabaseClient;
     event.locals.session = session;
 
+    const cookieTheme: string | undefined = event.cookies.get('colortheme');
+    if (cookieTheme) {
+        console.log();
+        return resolve(event, {
+
+            transformPageChunk: ({html}) => html.replace('data-theme=""', `data-theme="${cookieTheme}"`)
+        });
+    }
+
     return resolve(event);
+
 }
