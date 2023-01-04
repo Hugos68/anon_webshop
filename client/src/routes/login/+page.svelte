@@ -15,7 +15,7 @@
     }
 </script>
 
-<main class="flex flex-col justify-center items-center">
+<main class="text-center">
     <h1 class="text-4xl my-10">Login</h1>
     <form class="flex flex-col" action="?/login" method="POST" use:enhance={handleLogin}>
         <label class="mt-4 mb-2" for="email">Email</label>

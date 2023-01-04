@@ -24,7 +24,7 @@
 
 <main class="flex justify-evenly xl:items-center xl:flex-col ">
     <div in:fly={{x: 200, duration: 1000}}>
-        <h1 class="text-[clamp(5rem,12vw,12rem)]">Subjective.</h1>
+        <h1 class="text-[clamp(4rem,10vw,12rem)]">Subjective.</h1>
         <p class="mt-6" in:fly={{x: 200, duration: 1500}}>Where minds <span class="underline cursor-auto">aren't</span> alike</p>
         <a href="/shop" class="btn btn-primary mt-20 xl:hidden">Start shopping</a>
     </div>
