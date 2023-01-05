@@ -24,6 +24,7 @@
     }
 
     onMount(() => {
+        console.log($page);
         const {
             data: {subscription}
         } = supabaseClient.auth.onAuthStateChange(() => {
@@ -90,7 +91,7 @@
                 </div>
             </nav>
         </header>
-        {#key $page.route}
+        {#key $page.route.id}
             <main in:fly={{y:25, duration: 500}} class="px-[max(1rem,10vw)] py-[max(6rem,15vh)] flex justify-center flex-wrap">
                 <slot />
             </main>
