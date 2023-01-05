@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c74075f1-9de9-48a1-a552-ea36ea489e60" name="Changes" comment="Fixed mobile device x overflowing" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="tailwind-migration" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JobGsgCiof5DZd3noLdsYhnZIG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hugok/IdeaProjects/anon_webshop/client/src/routes/forgot-password&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\hugok\\IdeaProjects\\anon_webshop\\client\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hugok\IdeaProjects\anon_webshop\client\src\routes\forgot-password" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Added persistent shopping cart experience">
+      <created>1672700037990</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672700037990</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixed a typo">
+      <created>1672700065643</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672700065643</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added forgot password page">
+      <created>1672702150668</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672702150668</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Made some improvements with user input for login and sign up">
+      <created>1672703070175</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672703070175</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c74075f1-9de9-48a1-a552-ea36ea489e60" name="Changes" comment="Made some improvements with user input for login and sign up" />
+      <created>1672747300793</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672747300793</updated>
+      <workItem from="1672747302784" duration="701000" />
+      <workItem from="1672759519192" duration="1957000" />
+      <workItem from="1672763138213" duration="5010000" />
+      <workItem from="1672768664576" duration="179000" />
+      <workItem from="1672770505007" duration="3076000" />
+      <workItem from="1672777443471" duration="5217000" />
+      <workItem from="1672787301754" duration="5853000" />
+      <workItem from="1672862924271" duration="159000" />
+      <workItem from="1672867972033" duration="158000" />
+      <workItem from="1672921817833" duration="280000" />
+    </task>
+    <task id="LOCAL-00005" summary="Successfully migrated header to tailwind">
+      <created>1672767438767</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672767438767</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Styling">
+      <created>1672768201221</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672768201221</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Removed need for plugins">
+      <created>1672768839970</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672768839970</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Made underline-animation be tailwind and not custom css">
+      <created>1672773490648</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672773490648</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed darkmode/lightmode issue with underline">
+      <created>1672773566934</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672773566934</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Nicer padding for header">
+      <created>1672773626009</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672773626009</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Implemented DaisyUI">
+      <created>1672782728282</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672782728282</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fixed shopping cart number style">
+      <created>1672789863613</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672789863613</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Cleaned up dropdown menu">
+      <created>1672792304708</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1672792304708</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Dropdown menu styling">
+      <created>1672793244588</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1672793244588</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fixed mobile device x overflowing">
+      <created>1672863078274</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1672863078274</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added persistent shopping cart experience" />
+    <MESSAGE value="fixed a typo" />
+    <MESSAGE value="Added forgot password page" />
+    <MESSAGE value="Made some improvements with user input for login and sign up" />
+    <MESSAGE value="Successfully migrated header to tailwind" />
+    <MESSAGE value="Styling" />
+    <MESSAGE value="Removed need for plugins" />
+    <MESSAGE value="Made underline-animation be tailwind and not custom css" />
+    <MESSAGE value="Fixed darkmode/lightmode issue with underline" />
+    <MESSAGE value="Nicer padding for header" />
+    <MESSAGE value="Implemented DaisyUI" />
+    <MESSAGE value="Fixed shopping cart number style" />
+    <MESSAGE value="Cleaned up dropdown menu" />
+    <MESSAGE value="Dropdown menu styling" />
+    <MESSAGE value="Fixed mobile device x overflowing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed mobile device x overflowing" />
+  </component>
+</project>
