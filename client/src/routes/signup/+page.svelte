@@ -25,6 +25,7 @@
         <input type="password" id="password" name="password">
         <label class="mt-4 mb-2"  for="confirm-password">Confirm password</label>
         <input type="password" id="confirm-password" name="confirmPassword">
+        <a class="mt-4 text-center" href="/login">Already have an account?</a>
         <button class="btn btn-primary mt-16" type="submit">Sign up</button>
     </form>
 </main>

@@ -22,7 +22,7 @@
         <input type="text" id="email" name="email">
         <label class="mt-4 mb-2" for="password">Password</label>
         <input type="password" id="password" name="password">
-        <a class="mt-4 text-center" href="forgot-password">Forgot Password?</a>
+        <a class="mt-4 text-center" href="/forgot-password">Forgot Password?</a>
         <button class="btn btn-primary mt-8" type="submit">Login</button>
     </form>
     <p class="text-center font-bold my-10">Third-party login:</p>

@@ -11,30 +11,12 @@
     };
 </script>
 
-<main class="flex flex-col justify-center items-center">
-    <h1 class="text-4xl my-10">Forgot Password</h1>
-    <form action="?/forgotPassword" method="POST" use:enhance={handleForgotPassword}>
+<main class="flex flex-col">
+    <h1 class="text-center text-4xl mb-10">Forgot Password</h1>
+    <form class="flex flex-col" action="?/forgotPassword" method="POST" use:enhance={handleForgotPassword}>
         <label class="mt-4 mb-2" for="email">Email</label>
         <input type="text" id="email" name="email">
-        <a href="/login">Want to login?</a>
+        <a class="mt-4 text-center" href="/login-password">Want to login?</a>
         <button class="btn btn-primary mt-8" type="submit">Send reset link</button>
     </form>
 </main>
-
-<style>
-    form {
-        width: 20rem;
-        display: flex;
-        flex-direction: column;
-    }
-    form > a {
-        margin-top: 1rem;
-        margin-inline: auto;
-    }
-    form > label {
-        margin-top: 1rem;
-    }
-    form > button {
-        margin-top: 2.5rem;
-    }
-</style>

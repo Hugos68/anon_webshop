@@ -38,10 +38,10 @@
 <div class="drawer sticky">
     <input id="navbar-toggle" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
-        <header class="w-full navbar bg-primary text-accent px-[5vw]">
+        <header class="w-full navbar bg-primary px-[5vw]">
             <nav class="flex justify-between w-full">
                 <div class="flex-none min-lg:hidden">
-                    <label for="navbar-toggle" class="btn btn-square btn-ghost">
+                    <label for="navbar-toggle" class="btn btn-square btn-ghost text-accent">
                         <svg viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </label>
                 </div>
