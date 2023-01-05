@@ -1,6 +1,6 @@
 <script>
     import {flip} from "svelte/animate";
-    import Slider from '@bulatdashiev/svelte-slider';
+    import {fly} from "svelte/transition";
     import {createSearchStore, filterHandler} from "$lib/stores/search.ts";
     import {onDestroy} from "svelte";
     import toast from "svelte-french-toast";
@@ -23,8 +23,6 @@
         unsubscribe();
     });
 
-    const maxPrice = $searchStore.priceRange[1];
-
     const addToShoppingCart = (product) => {
         if (!data.session) {
             toast.error('You must be logged in before purchasing products', TOAST_STYLE);
@@ -33,142 +31,61 @@
         cart.addProduct(product);
         toast.success('Item added to cart', TOAST_STYLE);
     }
+
+    let index = 0;
 </script>
 
-<div class="wrapper">
-    <div class="top-header">
-        <h1>Products</h1>
-        <div class="catchy-text">
+<main>
+
+    <section class="mx-auto flex flex-col items-center justify-center">
+        <h1 class="text-4xl mt-10">Products</h1>
+        <div class="flex gap-4 mt-4">
             <p>Find.</p>
             <p>Buy.</p>
             <p>Enjoy.</p>
         </div>
-    </div>
-    <div class="filter-banner">
-        <div class="search">
-            <p>Search:</p>
-            <input class="search-bar" placeholder="Example: Flying Wooden Bird..." type="search" bind:value={$searchStore.search}>
-        </div>
-        <div class="price-range">
-            <p>Price range: ${$searchStore.priceRange[0]} - ${$searchStore.priceRange[1]}</p>
-            <Slider class="test" max="{maxPrice}" step="10" range bind:value={$searchStore.priceRange}/>
-        </div>
-    </div>
-    <div class="product-section">
+        <input class="mt-20" placeholder="Search..." type="search" bind:value={$searchStore.search} >
         {#if $searchStore.filtered.length > 0}
-            <p>Showing {$searchStore.filtered.length}/{$searchStore.data.length} products</p>
+            <p class="mt-10 mb-4">Showing {$searchStore.filtered.length}/{$searchStore.data.length} products</p>
         {:else}
-            <p>No results matching your search criteria</p>
+            <p class="mt-10 mb-4">No results matching your search criteria</p>
         {/if}
-        <div class="products">
-            {#each $searchStore.filtered as product (product.id)}
-                <div class="product-listing" animate:flip={{duration:250}}>
-                    <p class="title">{product.title}</p>
-                    <img loading="lazy" src="{product.thumbnail}" alt='{product.title.replace(" ", "_")}_image'>
-                    <p class="description">{product.description}</p>
-                    <div class="price-card-container">
-                        <p class="price">${product.price}</p>
-                        <button class="add-to-card-button" on:click={addToShoppingCart(product)}>Add to cart</button>
+    </section>
+    <div class="flex flex-wrap justify-evenly gap-6 flex-auto">
+        {#each $searchStore.filtered as product (product.id)}
+            <div animate:flip={{duration: 250}}>
+                <label class="cursor-pointer" for="product-modal-{product.id}" >
+                    <div in:fly={{delay : product.id*50}} class="card max-h-[30rem] min-w-[16.5rem] max-w-[20rem] bg-primary shadow-xl">
+                        <figure><img src="{product.thumbnail}" alt="{product.thumbnail}" /></figure>
+                        <div class="badge badge-secondary m-6">{product.category}</div>
+                        <div class="card-body">
+                            <h2 class="card-title">{product.title}</h2>
+                            <p>{product.description}</p>
+                            <div class="card-actions justify-between items-center">
+                                <div class="badge badge-lg">${product.price}</div>
+                                <button class="btn btn-secondary" on:click={addToShoppingCart(product)}>Add to cart</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            {/each}
-        </div>
+                </label>
+                <input  type="checkbox" id="product-modal-{product.id}" class="modal-toggle " />
+                <label for="product-modal-{product.id}" class="modal cursor-pointer">
+                    <div class="card min-lg:card-side max-h-[30rem]     bg-primary shadow-xl mx-12">
+                        <figure class="relative">
+                            <img src="{product.thumbnail}" alt="{product.thumbnail}"/>
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">{product.title}</h2>
+                            <p>{product.description}</p>
+                            <div class="card-actions justify-between items-center">
+                                <div class="badge badge-lg">${product.price}</div>
+                                <button class="btn btn-secondary" on:click={addToShoppingCart(product)}>Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        {/each}
     </div>
-</div>
-
-<style>
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10vh;
-    }
-    .top-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .top-header > .catchy-text {
-        display: flex;
-        gap: 1.5rem;
-    }
-    .filter-banner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-height: 10rem;
-        max-width: 75vw;
-        gap: 2rem;
-    }
-    .filter-banner > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 15rem;
-    }
-    .search > input {
-        width: 15rem;
-    }
-    .product-section > p {
-        text-align: center;
-    }
-    .products {
-        margin-inline: auto;
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        gap: 3rem;
-        max-width: 100%;
-    }
-    .product-listing {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        max-width: min-content;
-        padding: 1rem;
-        border: var(--accent-color) solid 0.1rem;
-        border-radius: 1.5rem;
-    }
-    .product-listing > .title {
-        font-size: 1.5rem;
-        font-weight: bolder;
-        z-index: 1;
-    }
-    .product-listing > .price-card-container > .price {
-        padding: 0.5rem;
-        border: lightblue solid 0.25rem;
-        border-radius: 1.5rem;
-    }
-    .product-listing > .price-card-container > .add-to-card-button {
-        padding: 0.5rem;
-        border: lightgreen solid 0.25rem;
-        border-radius: 1.5rem;
-        transition: transform 0.1s ease-in-out;
-    }
-    .product-listing > .price-card-container > .add-to-card-button:hover {
-        transform: scale(104%);
-    }
-    .product-listing > .price-card-container > .add-to-card-button:active {
-        transform: scale(98%);
-    }
-    .price-card-container {
-        margin-top: auto;
-        display: flex;
-        align-items: center;
-        gap: 2.5rem;
-    }
-    .product-listing > img {
-        max-height: 10rem;
-        width: available;
-        filter: brightness(75%);
-        border-radius: 1rem;
-    }
-    @media (max-width: 800px) {
-        .filter-banner {
-            flex-direction: column;
-        }
-    }
-</style>
+    <input type="checkbox" id="my-modal-5" class="modal-toggle" />
+</main>

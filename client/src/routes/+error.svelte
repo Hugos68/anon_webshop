@@ -2,16 +2,7 @@
     import { page } from '$app/stores';
 </script>
 
-<main>
-    <h1>{$page.status}: {$page.error.message}</h1>
+<main class="flex flex-col items-end">
+    <h1 class="font-semibold text-8xl">{$page.status}</h1>
+    <p>Error: {$page.error.message}</p>
 </main>
-
-
-<style>
-    main {
-        margin-top: 12.5vh;
-    }
-    h1 {
-        text-align: center;
-    }
-</style>

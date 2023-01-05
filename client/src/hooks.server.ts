@@ -8,5 +8,20 @@ export const handle: Handle = async ({event, resolve}) => {
     event.locals.sb = supabaseClient;
     event.locals.session = session;
 
-    return resolve(event);
+    let theme : string | undefined;
+    const newTheme = event.url.searchParams.get("theme");
+    const cookieTheme: string | undefined = event.cookies.get('colortheme');
+    theme = newTheme || cookieTheme;
+
+    if (theme) {
+        return resolve(event, {
+            transformPageChunk: ({html}) => html.replace('data-theme=""', `data-theme="${theme}"`)
+        });
+    }
+
+    // If no theme was found, default to dark
+    return resolve(event, {
+        transformPageChunk: ({html}) => html.replace('data-theme=""', 'data-theme="dark"')
+    });
+
 }

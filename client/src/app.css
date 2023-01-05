@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+    input {
+        @apply input;
+    }
+    label, a, p, h1, h2, h3 {
+        @apply text-accent;
+    }
+}
+
+@layer components {
+    .underline-animation {
+        @apply after:content-[''] after:bg-accent after:w-0 after:hover:w-[100%] after:block after:h-0.5 after:mx-auto after:transition-w after:duration-200 after:ease-in-out;
+    }
+
+    .underline-animation.active:after {
+        width: 100%;
+    }
+}
+
+
