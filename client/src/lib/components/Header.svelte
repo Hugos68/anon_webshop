@@ -68,7 +68,7 @@
                         </li>
                         <li>
                             <form class="p-0" method="POST" use:enhance={submitUpdateTheme}>
-                                <button formaction="/?/setTheme&theme={theme}" class="btn btn-primary h-full w-full text-transform capitalize" on:click={toggleTheme} type="submit">Theme: {theme.charAt(0).toUpperCase()+theme.slice(1)}</button>
+                                <button formaction="/?/setTheme&theme={theme}" class="btn btn-primary h-full w-full text-transform capitalize" on:click={toggleTheme} type="submit">Theme: {theme}</button>
                             </form>
                         </li>
                         <li>
