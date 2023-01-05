@@ -96,7 +96,7 @@
     <div class="drawer-side">
         <label for="navbar-toggle" class="drawer-overlay"></label>
         <nav class="menu py-4 px-8 w-[min(75vw,20rem)] bg-primary flex flex-col gap-8">
-            <p class="text-2xl">Subjective</p>
+            <p class="text-2xl font-semibold">Subjective</p>
             <div class="flex flex-col gap-4">
                 <a class="underline-animation text-xl w-fit" href="/home" class:active={$page.url.pathname === '/home'} on:click={() => {
                       document.getElementById("navbar-toggle").checked = false;
@@ -110,7 +110,6 @@
             </div>
         </nav>
     </div>
-
 </div>
 
 
