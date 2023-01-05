@@ -31,6 +31,8 @@
         cart.addProduct(product);
         toast.success('Item added to cart', TOAST_STYLE);
     }
+
+    let index = 0;
 </script>
 
 <main>
@@ -49,21 +51,41 @@
             <p class="mt-10 mb-4">No results matching your search criteria</p>
         {/if}
     </section>
-
-    <div class="mx-auto flex justify-evenly flex-wrap gap-6">
+    <div class="flex flex-wrap justify-evenly gap-6 flex-auto">
         {#each $searchStore.filtered as product (product.id)}
-            <div in:fly={{delay : product.id*50}} class="card max-w-[25rem] bg-primary shadow-xl" animate:flip={{duration: 250}}>
-                <figure class="w"><img src="{product.thumbnail}" alt="Shoes" /></figure>
-                <div class="badge badge-secondary m-6">{product.category}</div>
-                <div class="card-body">
-                    <h2 class="card-title">{product.title}</h2>
-                    <p>{product.description}</p>
-                    <div class="card-actions justify-between items-center">
-                        <div class="badge badge-lg">${product.price}</div>
-                        <button class="btn btn-secondary" on:click={addToShoppingCart(product)}>Add to cart</button>
+            <div animate:flip={{duration: 250}}>
+                <label class="cursor-pointer" for="product-modal-{product.id}" >
+                    <div in:fly={{delay : product.id*50}} class="card max-h-[30rem] min-w-[16.5rem] max-w-[20rem] bg-primary shadow-xl">
+                        <figure><img src="{product.thumbnail}" alt="{product.thumbnail}" /></figure>
+                        <div class="badge badge-secondary m-6">{product.category}</div>
+                        <div class="card-body">
+                            <h2 class="card-title">{product.title}</h2>
+                            <p>{product.description}</p>
+                            <div class="card-actions justify-between items-center">
+                                <div class="badge badge-lg">${product.price}</div>
+                                <button class="btn btn-secondary" on:click={addToShoppingCart(product)}>Add to cart</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </label>
+                <input  type="checkbox" id="product-modal-{product.id}" class="modal-toggle " />
+                <label for="product-modal-{product.id}" class="modal cursor-pointer">
+                    <div class="card min-lg:card-side max-h-[30rem]     bg-primary shadow-xl mx-12">
+                        <figure class="relative">
+                            <img src="{product.thumbnail}" alt="{product.thumbnail}"/>
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">{product.title}</h2>
+                            <p>{product.description}</p>
+                            <div class="card-actions justify-between items-center">
+                                <div class="badge badge-lg">${product.price}</div>
+                                <button class="btn btn-secondary" on:click={addToShoppingCart(product)}>Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </label>
             </div>
         {/each}
     </div>
+    <input type="checkbox" id="my-modal-5" class="modal-toggle" />
 </main>

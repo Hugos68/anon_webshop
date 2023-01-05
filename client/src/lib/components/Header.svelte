@@ -17,7 +17,7 @@
 </script>
 
 
-<header class="bg-primary sticky h-20 top-0 left-0 z-[997] px-[5vw] drop-shadow-md flex items-center">
+<header class="bg-primary fixed w-screen h-20 top-0 left-0 z-[997] px-[5vw] drop-shadow-md flex items-center">
     <nav class="flex items-center justify-between min-w-full py-4">
         <input class="z-[999] hidden peer" type="checkbox" id="hamburger-checkbox">
         <label class="w-8 h-8 relative hidden md:block z-[999] mr-auto cursor-pointer text-accent group" for="hamburger-checkbox">

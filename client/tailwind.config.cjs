@@ -11,11 +11,14 @@ module.exports = {
     },
     darkMode : 'class',
     screens: {
-      '2xl': {'max': '1500px'},
       'xl': {'max': '1250px'},
       'lg': {'max': '1000px'},
       'md': {'max': '800px'},
       'sm': {'max': '600px'},
+      'min-xl': {'min': '1250px'},
+      'min-lg': {'min': '1000px'},
+      'min-md': {'min': '800px'},
+      'min-sm': {'min': '600px'},
     },
   },
   plugins: [
