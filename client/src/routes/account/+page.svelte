@@ -1,18 +1,8 @@
 <script lang="ts">
+    import type {PageData} from "./$types";
+
+    export let data: PageData;
+    console.log(data);
 </script>
 
-
-<section class="information">
-    <p></p>
-</section>
-
-<section class="preferences">
-
-</section>
-<form action="/logout" method="POST">
-    <button type="submit">Logout</button>
-</form>
-
-<style>
-
-</style>
+<h1 class="text-center text-4xl mt-20">Welcome {data.session.user.email}</h1>

@@ -16,28 +16,16 @@
     }
 </script>
 
-<h1>Sign up</h1>
-<form action="?/signup" method="POST" use:enhance={handleSignup}>
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email">
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password">
-    <label for="confirm-password">Confirm password</label>
-    <input type="password" id="confirm-password" name="confirmPassword">
-    <button type="submit">Sign up</button>
-</form>
+<main class="text-center">
+    <h1 class="text-black dark:text-slate-300 text-4xl my-10">Sign up</h1>
+    <form class="flex flex-col" action="?/signup" method="POST" use:enhance={handleSignup}>
+        <label class="mt-4 mb-2" for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <label class="mt-4 mb-2" for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <label class="mt-4 mb-2"  for="confirm-password">Confirm password</label>
+        <input type="password" id="confirm-password" name="confirmPassword">
+        <button class="btn btn-primary mt-16" type="submit">Sign up</button>
+    </form>
+</main>
 
-
-<style>
-    form {
-        width: 20rem;
-        display: flex;
-        flex-direction: column;
-    }
-    form > label {
-        margin-top: 1rem;
-    }
-    form > button {
-        margin-top: 2.5rem;
-    }
-</style>
