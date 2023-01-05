@@ -108,6 +108,7 @@
                         document.getElementById("navbar-toggle").checked = false;
             }}>About</a>
             </div>
+            <p class="mt-auto">&#169 Subjective, All rights reserved</p>
         </nav>
     </div>
 </div>
