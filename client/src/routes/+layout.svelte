@@ -95,8 +95,12 @@
     </div>
     <div class="drawer-side">
         <label for="navbar-toggle" class="drawer-overlay"></label>
-        <nav class="menu py-4 px-8 w-[min(75vw,20rem)] bg-primary flex flex-col gap-8">
-            <p class="text-2xl font-semibold">Subjective</p>
+        <nav class="menu py-3 px-8 w-[min(75vw,17.5rem)] bg-primary flex flex-col gap-8">
+<!--            TODO: Add logo, incorporate slogan-->
+            <div>
+                <p class="text-xl font-semibold">Subjective</p>
+                <p class="text-sm">Where minds aren't alike</p>
+            </div>
             <div class="flex flex-col gap-4">
                 <a class="underline-animation text-xl w-fit" href="/home" class:active={$page.url.pathname === '/home'} on:click={() => {
                       document.getElementById("navbar-toggle").checked = false;
@@ -108,7 +112,7 @@
                         document.getElementById("navbar-toggle").checked = false;
             }}>About</a>
             </div>
-            <p class="mt-auto">&#169 Subjective, All rights reserved</p>
+            <p class="text-sm mt-auto">&#169 Subjective, All rights reserved</p>
         </nav>
     </div>
 </div>
