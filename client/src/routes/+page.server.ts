@@ -1,9 +1,4 @@
-import type { PageServerLoad, Actions} from './$types';
-import {redirect} from "@sveltejs/kit";
-
-export const load: PageServerLoad = async () => {
-    throw redirect(302, "/home");
-}
+import type {Actions} from './$types';
 
 export const actions : Actions =  {
     setTheme: async ({url, cookies}) => {
