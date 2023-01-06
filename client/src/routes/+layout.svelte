@@ -97,15 +97,15 @@
                             </ul>
                         </div>
                     {:else}
-                        <a data-sveltekit-preload-data="hover" class="underline-animation" href="/signup" class:active={$page.url.pathname === '/signup'}>Sign up</a>
-                        <a data-sveltekit-preload-data="hover" class="underline-animation" href="/login" class:active={$page.url.pathname === '/login'}>Log in</a>
+                        <a data-sveltekit-preload-data="hover" class="btn btn-sm btn-ghost bg-secondary text-accent" href="/signup" class:active={$page.url.pathname === '/signup'}>Sign up</a>
+                        <a data-sveltekit-preload-data="hover" class="btn btn-sm bg-accent text-secondary" href="/login" class:active={$page.url.pathname === '/login'}>Log in</a>
                     {/if}
                 </div>
             </nav>
         </header>
 <!--        CONTENT-->
         {#key $page.route.id}
-            <main in:fly={{y:25, duration: 500}} class="min-h-[max(100vh,100%)] px-[max(1rem,10vw)] py-[max(6rem,15vh)] flex justify-center flex-wrap">
+            <main in:fly={{y:25, duration: 500}} class="min-h-[max(100vh,100%)] px-[max(1rem,10vw)] py-[max(6rem,15vh)] flex items-center flex-col">
                 <slot />
             </main>
         {/key}
@@ -117,23 +117,22 @@
             </div>
             <div>
                 <span class="footer-title text-neutral">Services</span>
-                <a class="link link-hover">Branding</a>
-                <a class="link link-hover">Design</a>
-                <a class="link link-hover">Marketing</a>
-                <a class="link link-hover">Advertisement</a>
+                <a href="/branding" class="link link-hover">Branding</a>
+                <a href="/design" class="link link-hover">Design</a>
+                <a href="/marketing" class="link link-hover">Marketing</a>
+                <a href="/advertisement" class="link link-hover">Advertisement</a>
             </div>
             <div>
                 <span class="footer-title text-neutral">Company</span>
-                <a class="link link-hover">About us</a>
-                <a class="link link-hover">Contact</a>
-                <a class="link link-hover">Jobs</a>
-                <a class="link link-hover">Press kit</a>
+                <a href="/about" class="link link-hover">About us</a>
+                <a href="/contact" class="link link-hover">Contact</a>
+                <a href="jobs" class="link link-hover">Jobs</a>
             </div>
             <div>
                 <span class="footer-title text-neutral">Legal</span>
-                <a class="link link-hover">Terms of use</a>
-                <a class="link link-hover">Privacy policy</a>
-                <a class="link link-hover">Cookie policy</a>
+                <a href="/terms-of-use" class="link link-hover">Terms of use</a>
+                <a href="/privacy-policy" class="link link-hover">Privacy policy</a>
+                <a href="/cookie-policy" class="link link-hover">Cookie policy</a>
             </div>
         </footer>
     </div>
