@@ -39,7 +39,14 @@
         const pageRouteWithoutSlash = pageRoute.replace("/", "");
         pageTitle = pageRouteWithoutSlash.charAt(0).toUpperCase() + pageRouteWithoutSlash.substring(1)+" - Subjective";
     }
-
+    const acceptAllCookies = {
+        necessary : true,
+        personalized : true
+    }
+    const currentCookies = {
+        necessary : true,
+        personalized : false
+    }
 </script>
 
 <svelte:head>
@@ -147,10 +154,10 @@
             </div>
             <div class="flex flex-col gap-4">
                 <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/home" class:active={$page.url.pathname === '/home'} on:click={() => {
-                      document.getElementById("navbar-toggle").checked = false;
+                        document.getElementById("navbar-toggle").checked = false;
             }}>Home</a>
                 <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/shop" class:active={$page.url.pathname === '/shop'} on:click={() => {
-                          document.getElementById("navbar-toggle").checked = false;
+                        document.getElementById("navbar-toggle").checked = false;
             }}>Shop</a>
                 <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/about" class:active={$page.url.pathname === '/about'} on:click={() => {
                         document.getElementById("navbar-toggle").checked = false;
@@ -161,23 +168,56 @@
     </div>
 </div>
 
-{#if !$page.data.consentCookie}
-    <input type="checkbox" checked id="my-modal" class="modal-toggle" />
+<!--CONSENT COOKIES POPUP-->
+<input type="checkbox" checked="{!$page.data.consentCookie}" id="consent-cookies-popup" class="modal-toggle" />
+<div class="modal">
+    <div class="modal-box">
+        <h3 class="font-bold text-lg">Cookies</h3>
+        <p class="py-4">
+            We use cookies to enhance your experience here, please select your preference, see our full disclosure
+            at our <a class="link" href="cookie-policy">Cookie Policy</a>
+        </p>
+        <form class="modal-action" method="POST" use:enhance>
+            <label for="manage-cookies-popup" class="btn">Manage</label>
+            <button formaction="/?/setCookieConsent&cookies={acceptAllCookies}" type="submit">
+                <label class="btn" for="consent-cookies-popup">Accept All</label>
+            </button>
+        </form>
+    </div>
+
+    <!--MANAGE COOKIES POPUP-->
+    <input type="checkbox" id="manage-cookies-popup" class="modal-toggle" />
     <div class="modal">
         <div class="modal-box">
-            <h3 class="font-bold text-lg">Cookies</h3>
-            <p class="py-4">We use cookies to enhance your experience here, please select your preference</p>
+            <h3 class="font-bold text-lg">Manage Cookies</h3>
+            <p class="py-4">
+                We use cookies to enhance your experience here, please select your preference see our full disclosure
+                at our <a class="link" href="cookie-policy">Cookie Policy</a>
+            </p>
+            <div class="flex flex-col gap-4">
+                <div class="form-control">
+                    <label class="label cursor-pointer">
+                        <span class="label-text">Necessary Cookies</span>
+                        <input type="checkbox" disabled bind:checked={currentCookies.necessary} class="checkbox" />
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label class="label cursor-pointer">
+                        <span class="label-text">Personalized Cookies</span>
+                        <input type="checkbox" class="checkbox" bind:checked={currentCookies.personalized} />
+                    </label>
+                </div>
+            </div>
             <form class="modal-action" method="POST" use:enhance>
-                <button formaction="/?/setCookieConsent&accept=false" type="submit" >
-                    <label class="btn" for="my-modal">Deny</label>
-                </button>
-                <button formaction="/?/setCookieConsent&accept=true" type="submit">
-                    <label class="btn" for="my-modal">Accept</label>
+                <button formaction="/?/setCookieConsent&cookies={currentCookies}" type="submit">
+                    <label for="consent-cookies-popup" class="btn">Accept</label>
                 </button>
             </form>
         </div>
     </div>
-{/if}
+</div>
+
+
 
 
 
