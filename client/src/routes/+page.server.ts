@@ -9,5 +9,14 @@ export const actions : Actions =  {
                 maxAge: 60 * 60 * 24 * 365 * 10,
             });
         }
+    },
+    setCookieConsent:  async ({url, cookies}) => {
+        const accept = url.searchParams.get("accept");
+        if (accept) {
+            cookies.set("cookieconsent", accept, {
+                path : "/",
+                maxAge: 60 * 60 * 24 * 365 * 10,
+            });
+        }
     }
 }

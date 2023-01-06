@@ -33,6 +33,7 @@ const setTheme = (async ({event, resolve}) => {
     const newTheme = event.url.searchParams.get("theme");
     const cookieTheme: string | undefined = event.cookies.get('colortheme');
     const theme : string | undefined = newTheme || cookieTheme;
+
     if (theme) {
         return resolve(event, {
             transformPageChunk: ({html}) => html.replace('data-theme=""', `data-theme="${theme}"`)

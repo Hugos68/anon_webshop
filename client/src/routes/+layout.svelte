@@ -161,5 +161,24 @@
     </div>
 </div>
 
+{#if !$page.data.consentCookie}
+    <input type="checkbox" checked id="my-modal" class="modal-toggle" />
+    <div class="modal">
+        <div class="modal-box">
+            <h3 class="font-bold text-lg">Cookies</h3>
+            <p class="py-4">We use cookies to enhance your experience here, please select your preference</p>
+            <form class="modal-action" method="POST" use:enhance>
+                <button formaction="/?/setCookieConsent&accept=false" type="submit" >
+                    <label class="btn" for="my-modal">Deny</label>
+                </button>
+                <button formaction="/?/setCookieConsent&accept=true" type="submit">
+                    <label class="btn" for="my-modal">Accept</label>
+                </button>
+            </form>
+        </div>
+    </div>
+{/if}
+
+
 
 

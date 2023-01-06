@@ -1,5 +1,9 @@
 <script>
     import { page } from '$app/stores';
+    import {onMount} from "svelte";
+    onMount(() => {
+        console.log($page.error);
+    });
 </script>
 
 <main class="flex flex-col items-end">
