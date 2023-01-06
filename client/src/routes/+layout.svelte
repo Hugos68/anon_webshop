@@ -52,7 +52,7 @@
     <input id="navbar-toggle" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content">
 <!--        HEADER-->
-        <header class="w-full navbar bg-primary px-[5vw]">
+        <header class="w-full navbar bg-primary px-[5vw] top-0 z-[999] sticky">
             <nav class="flex justify-between w-full">
                 <div class="flex-none min-lg:hidden">
                     <label for="navbar-toggle" class="btn btn-square btn-ghost text-accent">
