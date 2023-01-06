@@ -23,7 +23,11 @@
         <label class="mt-4 mb-2" for="password">Password</label>
         <input type="password" id="password" name="password">
         <a class="mt-4 text-center" href="/forgot-password">Forgot Password?</a>
-        <button class="btn btn-primary mt-8" type="submit">Login</button>
+        <button class="btn rounded-full bg-accent mt-8" type="submit">
+            <svg class="w-8 h-8text-primary" fill="currentColor" viewBox="0 0 24 24">
+             <path id="Shape" d="M10.22,9.28a.75.75,0,0,1,0-1.06l2.72-2.72H.75A.75.75,0,0,1,.75,4H12.938L10.22,1.281A.75.75,0,1,1,11.281.22l4,4a.749.749,0,0,1,0,1.06l-4,4a.75.75,0,0,1-1.061,0Z" transform="translate(4.25 7.25)"/>
+            </svg>
+        </button>
     </form>
     <p class="text-center font-bold my-10">Third-party login:</p>
     <form class="flex justify-between" method="POST" use:enhance>
