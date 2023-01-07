@@ -39,7 +39,14 @@
         const pageRouteWithoutSlash = pageRoute.replace("/", "");
         pageTitle = pageRouteWithoutSlash.charAt(0).toUpperCase() + pageRouteWithoutSlash.substring(1)+" - Subjective";
     }
-
+    const acceptAllCookies : ConsentCookie = {
+        necessary : true,
+        personalized : true
+    }
+    const currentCookies : ConsentCookie  = {
+        necessary : true,
+        personalized : false
+    }
 </script>
 
 <svelte:head>
@@ -147,10 +154,10 @@
             </div>
             <div class="flex flex-col gap-4">
                 <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/home" class:active={$page.url.pathname === '/home'} on:click={() => {
-                      document.getElementById("navbar-toggle").checked = false;
+                        document.getElementById("navbar-toggle").checked = false;
             }}>Home</a>
                 <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/shop" class:active={$page.url.pathname === '/shop'} on:click={() => {
-                          document.getElementById("navbar-toggle").checked = false;
+                        document.getElementById("navbar-toggle").checked = false;
             }}>Shop</a>
                 <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/about" class:active={$page.url.pathname === '/about'} on:click={() => {
                         document.getElementById("navbar-toggle").checked = false;
@@ -160,6 +167,48 @@
         </nav>
     </div>
 </div>
+
+{#if !$page.data.consentCookie}
+
+    <!--CONSENT COOKIES POPUP-->
+    <input type="checkbox" checked id="consent-cookies-popup" class="modal-toggle"/>
+    <div class="modal">
+        <div class="modal-box bg-primary">
+            <h3 class="font-bold text-lg">Cookies</h3>
+            <p class="py-4">
+                We use cookies to enhance your experience here, please select your preference, see our full disclosure
+                at our <a class="link" href="cookie-policy">Cookie Policy</a>
+            </p>
+            <div class="flex flex-col gap-4">
+                <div class="form-control">
+                    <label class="label cursor-pointer">
+                        <span class="label-text text-accent">Necessary Cookies</span>
+                        <input class="checkbox checkbox-accent" type="checkbox" disabled checked />
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label class="label cursor-pointer">
+                        <span class="label-text text-accent">Personalized Cookies</span>
+                        <input class="checkbox checkbox-accent" type="checkbox" bind:checked={currentCookies.personalized} />
+                    </label>
+                </div>
+            </div>
+
+            <form class="modal-action" method="POST" use:enhance>
+                <button formaction="/?/setCookieConsent&cookies={JSON.stringify(currentCookies)}" type="submit">
+                    <label for="consent-cookies-popup" class="btn bg-secondary btn-ghost text-accent">Accept</label>
+                </button>
+                <button formaction="/?/setCookieConsent&cookies={JSON.stringify(acceptAllCookies)}" type="submit">
+                    <label class="btn" for="consent-cookies-popup">Accept All</label>
+                </button>
+            </form>
+        </div>
+    </div>
+{/if}
+
+
+
+
 
 
 

@@ -5,7 +5,7 @@
 
 
 @layer base {
-    input {
+    input:not([type='checkbox']) {
         @apply input bg-primary text-accent h-10;
     }
     label, a, p, h1, h2, h3 {
