@@ -118,7 +118,7 @@
                 </nav>
             </header>
     <!--        CONTENT-->
-
+    
                 <main in:fly={{y:25, duration: 500}} class="min-h-[max(100vh,100%)] px-[max(1rem,10vw)] py-[max(6rem,15vh)] flex items-center flex-col">
                     <slot />
                 </main>
@@ -204,10 +204,3 @@
         </div>
     </div>
 {/if}
-
-
-
-
-
-
-
