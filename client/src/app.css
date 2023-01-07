@@ -11,6 +11,9 @@
     label, a, p, h1, h2, h3 {
         @apply text-accent;
     }
+    p {
+        @apply max-w-2xl
+    }
 }
 
 @layer components {
