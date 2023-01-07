@@ -64,7 +64,7 @@
 <div class="drawer">
     <input id="navbar-toggle" type="checkbox" class="drawer-toggle" />
     {#key $page.route.id}
-        <div class="drawer-content">
+        <div class="drawer-content scroll-pt-16">
     <!--        HEADER-->
             <header class="w-full navbar bg-primary px-[5vw] top-0 z-[999] sticky">
                 <nav class="flex justify-between w-full">
@@ -143,9 +143,9 @@
                 </div>
                 <div>
                     <span class="footer-title text-neutral">Legal</span>
-                    <a href="/terms-of-use" class="link link-hover">Terms of use</a>
-                    <a href="/privacy-policy" class="link link-hover">Privacy policy</a>
-                    <a href="/cookie-policy" class="link link-hover">Cookie policy</a>
+                    <a href="/legal#privacy-policy" class="link link-hover">Privacy policy</a>
+                    <a href="/legal#terms-of-use" class="link link-hover">Terms of use</a>
+                    <a href="/legal#copyright" class="link link-hover">Copright</a>
                 </div>
             </footer>
         </div>
@@ -169,7 +169,7 @@
     </div>
 </div>
 
-{#if (!$page.data.consentCookie && !($page.route.id || "").startsWith("/privacy"))}
+{#if (!$page.data.consentCookie && !($page.route.id || "").startsWith("/legal"))}
 
     <!--CONSENT COOKIES POPUP-->
     <input type="checkbox" checked id="consent-cookies-popup" class="modal-toggle"/>
@@ -177,7 +177,7 @@
         <div class="modal-box bg-primary">
             <h3 class="font-bold text-lg">Cookies</h3>
             <p class="py-4">By clicking “Accept” or "Accept All", you agree Subjective can store cookies on your device and disclose
-                information in accordance with our <a class="link" href="/privacy#cookies">Cookie Policy</a>.</p>
+                information in accordance with our <a class="link" href="/legal#cookies">Cookie Policy</a>.</p>
             <div class="flex flex-col">
                 <div class="form-control">
                     <label class="label cursor-pointer">
