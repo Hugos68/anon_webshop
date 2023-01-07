@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c74075f1-9de9-48a1-a552-ea36ea489e60" name="Changes" comment="Create extra gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/anon_webshop.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7-1-2023_10_36_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="c74075f1-9de9-48a1-a552-ea36ea489e60" name="Changes" comment="Better cookie message">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="tailwind-migration" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
   </component>
@@ -35,23 +27,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/hugok/IdeaProjects/anon_webshop/client/src/routes/forgot-password",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.rails.projectView.checked": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\hugok\\Documents\\Personal\\anon_webshop\\client\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hugok/IdeaProjects/anon_webshop/client/src/routes/forgot-password&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\hugok\\Documents\\Personal\\anon_webshop\\client\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hugok\IdeaProjects\anon_webshop\client\src\routes\forgot-password" />
@@ -110,7 +101,8 @@
       <workItem from="1672862924271" duration="159000" />
       <workItem from="1672867972033" duration="158000" />
       <workItem from="1672921817833" duration="280000" />
-      <workItem from="1673084527109" duration="74000" />
+      <workItem from="1673050664508" duration="588000" />
+      <workItem from="1673109558426" duration="245000" />
     </task>
     <task id="LOCAL-00005" summary="Successfully migrated header to tailwind">
       <created>1672767438767</created>
@@ -238,28 +230,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672973870024</updated>
     </task>
-    <task id="LOCAL-00023" summary="Updated node version, fixed cookie issue (different domain names), auto redirect to localhost when accessing 127.0.0.1 and moved auto redirect to home when visiting root to hooks">
-      <created>1673021268863</created>
+    <task id="LOCAL-00023" summary="Successfully implemented cookies control for users">
+      <created>1673050900750</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1673021268863</updated>
+      <updated>1673050900750</updated>
     </task>
-    <task id="LOCAL-00024" summary="commit to get rid of uncommited bs">
-      <created>1673084257222</created>
+    <task id="LOCAL-00024" summary="Better cookie message">
+      <created>1673051221966</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1673084257222</updated>
+      <updated>1673051221966</updated>
     </task>
-    <task id="LOCAL-00025" summary="Create extra gitignore">
-      <created>1673084349132</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1673084349132</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,9 +273,8 @@
     <MESSAGE value="Header is now sticky whilst retaining functionality" />
     <MESSAGE value="Header is sticky fixed weird scroll position bug" />
     <MESSAGE value="Removed unused dependencies" />
-    <MESSAGE value="Updated node version, fixed cookie issue (different domain names), auto redirect to localhost when accessing 127.0.0.1 and moved auto redirect to home when visiting root to hooks" />
-    <MESSAGE value="commit to get rid of uncommited bs" />
-    <MESSAGE value="Create extra gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create extra gitignore" />
+    <MESSAGE value="Successfully implemented cookies control for users" />
+    <MESSAGE value="Better cookie message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better cookie message" />
   </component>
 </project>
