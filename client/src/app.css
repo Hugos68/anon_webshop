@@ -19,7 +19,7 @@
     }
 
     .underline-animation.active:after {
-        width: 100%;
+        @apply w-full
     }
 }
 
