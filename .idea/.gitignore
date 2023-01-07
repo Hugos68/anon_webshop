@@ -4,6 +4,7 @@
 # User-specific stuff
 .idea
 .idea/*
+workspace.xml
 
 # CMake
 cmake-build-*/
