@@ -8,7 +8,6 @@
     import '../app.css';
     import {enhance} from "$app/forms";
     import {fly} from "svelte/transition"
-
     import type {SubmitFunction} from  "$app/forms";
 
     let theme = $page.data.theme;
