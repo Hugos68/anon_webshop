@@ -63,7 +63,7 @@
 <div class="drawer">
     <input id="navbar-toggle" type="checkbox" class="drawer-toggle" />
     {#key $page.route.id}
-        <div class="drawer-content scroll-pt-16">
+        <div class="drawer-content scroll-pt-24">
     <!--        HEADER-->
             <header class="w-full navbar bg-primary px-[5vw] top-0 z-[999] sticky">
                 <nav class="flex justify-between w-full">
