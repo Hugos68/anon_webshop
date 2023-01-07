@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c74075f1-9de9-48a1-a552-ea36ea489e60" name="Changes" comment="Updated node version, fixed cookie issue (different domain names), auto redirect to localhost when accessing 127.0.0.1 and moved auto redirect to home when visiting root to hooks">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29-12-2022_13_53_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30-12-2022_14_44_[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="c74075f1-9de9-48a1-a552-ea36ea489e60" name="Changes" comment="Create extra gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/anon_webshop.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7-1-2023_10_36_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,26 +35,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hugok/IdeaProjects/anon_webshop/client/src/routes/forgot-password&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\hugok\\Documents\\Personal\\anon_webshop\\client\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/hugok/IdeaProjects/anon_webshop/client/src/routes/forgot-password",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\hugok\\Documents\\Personal\\anon_webshop\\client\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hugok\IdeaProjects\anon_webshop\client\src\routes\forgot-password" />
     </key>
+  </component>
+  <component name="RubyModuleManagerSettings">
+    <option name="blackListedRootsPaths">
+      <list>
+        <option value="$PROJECT_DIR$" />
+      </list>
+    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -95,6 +110,7 @@
       <workItem from="1672862924271" duration="159000" />
       <workItem from="1672867972033" duration="158000" />
       <workItem from="1672921817833" duration="280000" />
+      <workItem from="1673084527109" duration="74000" />
     </task>
     <task id="LOCAL-00005" summary="Successfully migrated header to tailwind">
       <created>1672767438767</created>
@@ -229,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673021268863</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="commit to get rid of uncommited bs">
+      <created>1673084257222</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1673084257222</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Create extra gitignore">
+      <created>1673084349132</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1673084349132</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +289,8 @@
     <MESSAGE value="Header is sticky fixed weird scroll position bug" />
     <MESSAGE value="Removed unused dependencies" />
     <MESSAGE value="Updated node version, fixed cookie issue (different domain names), auto redirect to localhost when accessing 127.0.0.1 and moved auto redirect to home when visiting root to hooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated node version, fixed cookie issue (different domain names), auto redirect to localhost when accessing 127.0.0.1 and moved auto redirect to home when visiting root to hooks" />
+    <MESSAGE value="commit to get rid of uncommited bs" />
+    <MESSAGE value="Create extra gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create extra gitignore" />
   </component>
 </project>

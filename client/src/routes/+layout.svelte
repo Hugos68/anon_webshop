@@ -3,7 +3,7 @@
     import {supabaseClient} from '$lib/supabase';
     import {invalidateAll} from '$app/navigation';
     import {page} from "$app/stores";
-    import {cart} from "$lib/stores/cart.ts";
+    import {cart} from "$lib/stores/cart.js";
     import {Toaster} from "svelte-french-toast";
     import '../app.css';
     import {enhance} from "$app/forms";
@@ -33,7 +33,7 @@
             subscription.unsubscribe();
         }
     });
-    let pageTitle;
+    let pageTitle : string = "Subjective";
     $: {
         const pageRoute:string = $page.route.id || "";
         const pageRouteWithoutSlash = pageRoute.replace("/", "");
@@ -46,6 +46,13 @@
     const currentCookies : ConsentCookie  = {
         necessary : true,
         personalized : false
+    }
+    let navbar : HTMLInputElement | null;
+    onMount(() => {
+        navbar = document.getElementById("navbar-toggle") as HTMLInputElement | null;
+    });
+    const toggleNavBar = () => {
+        if (navbar) navbar.checked = !navbar.checked;
     }
 </script>
 
@@ -153,15 +160,9 @@
                 <p class="text-sm">Where minds aren't alike</p>
             </div>
             <div class="flex flex-col gap-4">
-                <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/home" class:active={$page.url.pathname === '/home'} on:click={() => {
-                        document.getElementById("navbar-toggle").checked = false;
-            }}>Home</a>
-                <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/shop" class:active={$page.url.pathname === '/shop'} on:click={() => {
-                        document.getElementById("navbar-toggle").checked = false;
-            }}>Shop</a>
-                <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/about" class:active={$page.url.pathname === '/about'} on:click={() => {
-                        document.getElementById("navbar-toggle").checked = false;
-            }}>About</a>
+                <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/home" class:active={$page.url.pathname === '/home'} on:click={toggleNavBar}>Home</a>
+                <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/shop" class:active={$page.url.pathname === '/shop'} on:click={toggleNavBar}>Shop</a>
+                <a data-sveltekit-preload-data="hover" class="underline-animation text-xl w-fit" href="/about" class:active={$page.url.pathname === '/about'} on:click={toggleNavBar}>About</a>
             </div>
             <p class="text-sm mt-auto">&#169 Subjective, All rights reserved</p>
         </nav>
