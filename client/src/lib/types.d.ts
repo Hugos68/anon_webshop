@@ -16,3 +16,8 @@ interface Product {
     thumbnail: string,
     images: []
 }
+
+interface ConsentCookie {
+    necessary : boolean,
+    personalized : boolean
+}

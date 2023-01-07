@@ -12,16 +12,6 @@ const redirectToLocalhost = (async ({ event, resolve }) => {
     return resolve(event)
 }) satisfies Handle
 
-const redirectToHome = (async ({ event, resolve }) => {
-    const url = new URL(event.request.url)
-    if (url.pathname === '/') {
-        url.pathname = '/home'
-        return Response.redirect(url.toString(), 302)
-    }
-    return resolve(event)
-}) satisfies Handle
-
-
 const handleAuth =  (async ({event, resolve}) => {
     const { session, supabaseClient } = await getSupabase(event);
     event.locals.sb = supabaseClient;
@@ -45,5 +35,5 @@ const setTheme = (async ({event, resolve}) => {
     });
 }) satisfies Handle
 
-export const handle: Handle = sequence(redirectToLocalhost, redirectToHome, handleAuth, setTheme);
+export const handle: Handle = sequence(redirectToLocalhost, handleAuth, setTheme);
 

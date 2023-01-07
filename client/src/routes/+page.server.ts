@@ -1,8 +1,13 @@
-import type {Actions} from './$types';
+import type {Actions, PageServerLoad} from './$types';
+import {redirect} from "@sveltejs/kit";
+import {arePersonalizedCookiesAllowed} from "$lib/util";
 
+export const load: PageServerLoad = async () => {
+    throw redirect(302, "/home");
+}
 export const actions: Actions = {
     setTheme: async ({ url, cookies }) => {
-        console.log("WORKED DONT TOUCH IT")
+        if (!arePersonalizedCookiesAllowed(cookies)) return;
         const theme = url.searchParams.get("theme");
         if (theme) {
             cookies.set("colortheme", theme, {
@@ -12,7 +17,6 @@ export const actions: Actions = {
         }
     },
     setCookieConsent: async ({url, cookies}) => {
-        console.log("WORKED DONT TOUCH IT")
         const cookieConsent = url.searchParams.get("cookies");
         if (cookieConsent) {
             cookies.set("cookieconsent", cookieConsent, {
