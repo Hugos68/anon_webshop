@@ -19,9 +19,9 @@
     <h1 class="text-center text-4xl mb-10">Log in</h1>
     <form class="flex flex-col" action="?/login" method="POST" use:enhance={handleLogin}>
         <label class="mt-4 mb-2" for="email">Email</label>
-        <input type="text" id="email" name="email">
+        <input class="input bg-primary text-accent h-10" type="text" id="email" name="email">
         <label class="mt-4 mb-2" for="password">Password</label>
-        <input type="password" id="password" name="password">
+        <input class="input bg-primary text-accent h-10" type="password" id="password" name="password">
         <a class="mt-4 text-center" href="/forgot-password">Forgot Password?</a>
         <button class="btn rounded-full bg-accent mt-8" type="submit">
             <svg class="w-8 h-8text-primary" fill="currentColor" viewBox="0 0 24 24">

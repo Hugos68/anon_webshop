@@ -20,11 +20,11 @@
     <h1 class="text-center text-4xl mb-10">Sign up</h1>
     <form class="flex flex-col" action="?/signup" method="POST" use:enhance={handleSignup}>
         <label class="mt-4 mb-2" for="email">Email</label>
-        <input type="text" id="email" name="email">
+        <input class="input bg-primary text-accent h-10" type="text" id="email" name="email">
         <label class="mt-4 mb-2" for="password">Password</label>
-        <input type="password" id="password" name="password">
+        <input class="input bg-primary text-accent h-10" type="password" id="password" name="password">
         <label class="mt-4 mb-2"  for="confirm-password">Confirm password</label>
-        <input type="password" id="confirm-password" name="confirmPassword">
+        <input class="input bg-primary text-accent h-10" type="password" id="confirm-password" name="confirmPassword">
         <a class="mt-4 text-center" href="/login">Already have an account?</a>
         <button class="btn btn-primary mt-16" type="submit">Sign up</button>
     </form>
