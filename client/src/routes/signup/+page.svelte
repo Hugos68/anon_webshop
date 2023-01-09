@@ -2,9 +2,10 @@
     import {applyAction, enhance} from "$app/forms";
     import toast from "svelte-french-toast";
     import {TOAST_STYLE} from "../../app_constants.ts";
+    import type {ActionResult} from "@sveltejs/kit";
 
-    async function handleSignup() {
-        return async ({ result }) => {
+    const handleSignup = () => {
+        return async ({ result }: ActionResult) => {
             await applyAction(result);
             if (result.type === 'redirect') {
                 toast.success('Success! Please verify your email', TOAST_STYLE);

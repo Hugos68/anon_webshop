@@ -21,3 +21,9 @@ interface ConsentCookie {
     necessary : boolean,
     personalized : boolean
 }
+
+interface SearchStore {
+    data: Product[],
+    filtered: Product[],
+    search: string
+}

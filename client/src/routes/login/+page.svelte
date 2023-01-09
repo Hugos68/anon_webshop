@@ -2,9 +2,10 @@
     import {enhance} from "$app/forms";
     import toast from "svelte-french-toast";
     import {TOAST_STYLE} from "../../app_constants.ts";
+    import type {ActionResult} from "@sveltejs/kit";
 
-    async function handleLogin() {
-        return async ({ result }) => {
+    const handleLogin = () => {
+        return async ({ result }: ActionResult) => {
             if (result.type === 'redirect') {
                 toast.success('Successfully logged in!', TOAST_STYLE);
             }

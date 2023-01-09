@@ -1,10 +1,10 @@
 import {get, writable} from "svelte/store";
 import type {Writable} from "svelte/store";
-import {persist, createCookieStorage, createSessionStorage} from "@macfja/svelte-persistent-store"
+import {persist, createCookieStorage} from "@macfja/svelte-persistent-store"
 
 const createCart = () => {
     const cart: Writable<CartItem[]> = writable([]);
-    persist<CartItem[]>(cart, createSessionStorage(), "shopping-cart");
+    persist<CartItem[]>(cart, createCookieStorage(), "shopping-cart");
     const {subscribe, update}: Writable<CartItem[]> = cart;
     return {
         subscribe,

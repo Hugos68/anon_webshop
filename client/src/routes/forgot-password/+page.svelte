@@ -2,9 +2,10 @@
     import {enhance} from "$app/forms";
     import toast from "svelte-french-toast";
     import {TOAST_STYLE} from "../../app_constants";
+    import type {ActionResult} from "@sveltejs/kit";
 
-    const handleForgotPassword = ({ form, data, action, cancel }) => {
-        return async ({ result }) => {
+    const handleForgotPassword = () => {
+        return async ({ result }: ActionResult) => {
             if (result.type === 'success') toast.success("Successfully send email to reset password.", TOAST_STYLE);
             else if (result.type === 'error') toast.error(result.data.message, TOAST_STYLE);
         };
