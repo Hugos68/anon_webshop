@@ -12,6 +12,8 @@ declare global {
         interface Locals {
             sb: TypedSupabaseClient
             session: Session | null
+            consentCookie: ConsentCookie | undefined;
+            theme: string
         }
         interface PageData {
             session: import('@supabase/supabase-js').Session | null,

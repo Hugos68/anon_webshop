@@ -1,13 +1,17 @@
 import type {Actions, PageServerLoad} from './$types';
 import {redirect} from "@sveltejs/kit";
-import {arePersonalizedCookiesAllowed} from "$lib/util";
 
 export const load: PageServerLoad = async () => {
     throw redirect(302, "/home");
 }
 export const actions: Actions = {
     setTheme: async ({ url, cookies }) => {
-        if (!arePersonalizedCookiesAllowed()) return;
+
+        // Check if user consents to personalized cookies, if not return
+        const consentCookie = cookies.get("consentCookie");
+        if (!consentCookie) return;
+        else if (!JSON.parse(consentCookie).personalized) return;
+
         const theme = url.searchParams.get("theme");
         if (theme) {
             cookies.set("colortheme", theme, {

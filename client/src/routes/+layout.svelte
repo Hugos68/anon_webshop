@@ -9,23 +9,14 @@
     import {enhance} from "$app/forms";
     import {fly} from "svelte/transition"
     import type {SubmitFunction} from  "$app/forms";
-	import type { LayoutData } from './$types';
 
-    export let data: LayoutData;
-
-    let theme = $page.data.theme;
-    const toggleTheme = () => {
-        if (theme==="dark") theme="light";
-        else theme="dark";
-    }
-    const submitUpdateTheme: SubmitFunction = ({action}) => {
-        const theme = action.searchParams.get('theme');
-        if (theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-        }
+    let navbar : HTMLInputElement | null;
+    const toggleNavBar = () => {
+        if (navbar) navbar.checked = !navbar.checked;
     }
 
     onMount(() => {
+        navbar = document.getElementById("navbar-toggle") as HTMLInputElement | null;
         const {
             data: {subscription}
         } = supabaseClient.auth.onAuthStateChange(() => {
@@ -35,28 +26,32 @@
             subscription.unsubscribe();
         }
     });
-    let pageTitle : string = "Subjective";
+
+    let theme = $page.data.theme;
+    const toggleTheme = () => theme==="dark" ? theme="light" : theme="dark";
+    const submitUpdateTheme: SubmitFunction = ({action}) => {
+        const theme = action.searchParams.get('theme');
+        if (theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+        }
+    }
+
+    let pageTitle;
     $: {
-        const pageRoute:string = $page.route.id || "";
+        const pageRoute = $page.route.id || "";
         const pageRouteWithoutSlash = pageRoute.replace("/", "");
         pageTitle = pageRouteWithoutSlash.charAt(0).toUpperCase() + pageRouteWithoutSlash.substring(1)+" - Subjective";
     }
-    const acceptAllCookies : ConsentCookie = {
+
+    const acceptAllCookies: ConsentCookie = {
         necessary : true,
         functional : true,
         personalized : true
     }
-    const currentCookies : ConsentCookie  = {
+    const currentCookies: ConsentCookie  = {
         necessary : true,
         functional : false,
         personalized : false
-    }
-    let navbar : HTMLInputElement | null;
-    onMount(() => {
-        navbar = document.getElementById("navbar-toggle") as HTMLInputElement | null;
-    });
-    const toggleNavBar = () => {
-        if (navbar) navbar.checked = !navbar.checked;
     }
 </script>
 
@@ -172,6 +167,7 @@
         </nav>
     </div>
 </div>
+
 
 {#if (!$page.data.consentCookie && !($page.route.id || "").startsWith("/legal"))}
 

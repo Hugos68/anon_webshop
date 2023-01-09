@@ -13,13 +13,17 @@ const handleRedirectToLocalHost: Handle = (async ({ event, resolve }) => {
 });
 
 const handleConsentCookie: Handle = (async ({ event, resolve }) => {
-    if (!event.cookies.get("cookieconsent")) {
+    const consentCookie = event.cookies.get("cookieconsent");
+    if (!consentCookie) {
         event.cookies.set('colortheme', '', {
             maxAge: -1
         });
         event.cookies.set('supabase-auth-token', '', {
             maxAge: -1
         });
+    }
+    else {
+        event.locals.consentCookie = JSON.parse(consentCookie) as ConsentCookie;
     }
     return resolve(event);
 });
@@ -35,17 +39,14 @@ const handleAuth: Handle =  (async ({event, resolve}) => {
 const handleTheme: Handle = (async ({event, resolve}) => {
     const newTheme = event.url.searchParams.get("theme");
     const cookieTheme: string | undefined = event.cookies.get('colortheme');
-    const theme : string | undefined = newTheme || cookieTheme;
+    const theme : string = newTheme || cookieTheme || "dark";
 
-    if (theme) {
-        return resolve(event, {
-            transformPageChunk: ({html}) => html.replace('data-theme=""', `data-theme="${theme}"`)
-        });
-    }
-    // If no theme was found, default to dark
+    event.locals.theme = theme;
+
     return resolve(event, {
-        transformPageChunk: ({html}) => html.replace('data-theme=""', 'data-theme="dark"')
+        transformPageChunk: ({html}) => html.replace('data-theme=""', `data-theme="${theme}"`)
     });
+
 });
 
 export const handle: Handle = sequence(handleRedirectToLocalHost, handleConsentCookie, handleAuth, handleTheme);

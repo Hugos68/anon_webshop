@@ -1,4 +1,4 @@
-import {get, writable} from "svelte/store";
+import {derived, get, writable} from "svelte/store";
 import type {Writable} from "svelte/store";
 import {persist, createCookieStorage} from "@macfja/svelte-persistent-store"
 
