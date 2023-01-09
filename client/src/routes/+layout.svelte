@@ -44,12 +44,12 @@
     }
 
     const acceptAllCookies: ConsentCookie = {
-        necessary : true,
+        required : true,
         functional : true,
         personalized : true
     }
     const currentCookies: ConsentCookie  = {
-        necessary : true,
+        required : true,
         functional : false,
         personalized : false
     }
@@ -117,10 +117,9 @@
                 </nav>
             </header>
     <!--        CONTENT-->
-    
-                <main in:fly={{y:25, duration: 500}} class="min-h-[max(100vh,100%)] px-[max(1rem,10vw)] py-[max(6rem,15vh)] flex items-center flex-col">
-                    <slot />
-                </main>
+            <main in:fly={{y:25, duration: 500}} class="min-h-[max(100vh,100%)] px-[max(1rem,10vw)] py-[max(6rem,15vh)] flex items-center flex-col">
+                <slot />
+            </main>
     <!--        FOOTER-->
             <footer class="footer p-10 bg-primary">
                 <div>
@@ -181,7 +180,7 @@
             <div class="flex flex-col">
                 <div class="form-control">
                     <label class="label cursor-pointer">
-                        <span class="label-text text-accent">Necessary Cookies</span>
+                        <span class="label-text text-accent">Essential Cookies</span>
                         <input class="checkbox checkbox-accent" type="checkbox" disabled checked />
                     </label>
                 </div>

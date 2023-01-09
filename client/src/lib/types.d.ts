@@ -18,7 +18,7 @@ interface Product {
 }
 
 interface ConsentCookie {
-    necessary : boolean,
+    required : boolean,
     functional : boolean,
     personalized : boolean
 }

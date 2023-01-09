@@ -8,7 +8,7 @@ export const actions: Actions = {
     setTheme: async ({ url, cookies }) => {
 
         // Check if user consents to personalized cookies, if not return
-        const consentCookie = cookies.get("consentCookie");
+        const consentCookie = cookies.get("cookieconsent");
         if (!consentCookie) return;
         else if (!JSON.parse(consentCookie).personalized) return;
 
