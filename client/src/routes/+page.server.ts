@@ -7,7 +7,7 @@ export const load: PageServerLoad = async () => {
 }
 export const actions: Actions = {
     setTheme: async ({ url, cookies }) => {
-        if (!arePersonalizedCookiesAllowed(cookies)) return;
+        if (!arePersonalizedCookiesAllowed()) return;
         const theme = url.searchParams.get("theme");
         if (theme) {
             cookies.set("colortheme", theme, {

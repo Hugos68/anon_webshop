@@ -14,8 +14,11 @@ declare global {
             session: Session | null
         }
         interface PageData {
-            session: import('@supabase/supabase-js').Session | null
+            session: import('@supabase/supabase-js').Session | null,
+            theme: string,
+            consentCookie: ConsentCookie | undefined
         }
+
     }
 
 }

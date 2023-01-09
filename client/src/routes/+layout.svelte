@@ -9,6 +9,9 @@
     import {enhance} from "$app/forms";
     import {fly} from "svelte/transition"
     import type {SubmitFunction} from  "$app/forms";
+	import type { LayoutData } from './$types';
+
+    export let data: LayoutData;
 
     let theme = $page.data.theme;
     const toggleTheme = () => {
@@ -40,10 +43,12 @@
     }
     const acceptAllCookies : ConsentCookie = {
         necessary : true,
+        functional : true,
         personalized : true
     }
     const currentCookies : ConsentCookie  = {
         necessary : true,
+        functional : false,
         personalized : false
     }
     let navbar : HTMLInputElement | null;
@@ -182,6 +187,12 @@
                     <label class="label cursor-pointer">
                         <span class="label-text text-accent">Necessary Cookies</span>
                         <input class="checkbox checkbox-accent" type="checkbox" disabled checked />
+                    </label>
+                </div>
+                <div class="form-control">
+                    <label class="label cursor-pointer">
+                        <span class="label-text text-accent">Functional Cookies</span>
+                        <input class="checkbox checkbox-accent" type="checkbox" bind:checked={currentCookies.functional} />
                     </label>
                 </div>
                 <div class="form-control">

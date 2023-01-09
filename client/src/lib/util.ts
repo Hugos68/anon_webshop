@@ -1,8 +1,16 @@
-import type {Cookies} from "@sveltejs/kit";
+import { page } from "$app/stores";
 
-export const arePersonalizedCookiesAllowed = (cookies: Cookies) => {
-    const consentCookie: string | undefined = cookies.get("cookieconsent");
+export const arePersonalizedCookiesAllowed = () => {
+    let consentCookie;
+    page.subscribe(value => {
+        consentCookie = value.data.consentCookie;
+    });
+
     if (!consentCookie) return false;
-    const consentCookieParsed: ConsentCookie = JSON.parse(consentCookie);
-    return consentCookieParsed.personalized;
+    return consentCookie.personalized;
+}
+
+export const areFunctionalCookiesAllowed = () => {
+    if (!consentCookie) return false;
+    return consentCookie.functional;
 }
