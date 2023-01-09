@@ -8,7 +8,7 @@
         return async ({ result }: ActionResult) => {
             await applyAction(result);
             if (result.type === 'redirect') {
-                toast.success('Success! Please verify your email', TOAST_STYLE);
+                toast.success('Check your email for the confirmation link', TOAST_STYLE);
             }
             else {
                 toast.error(result.data.message, TOAST_STYLE);

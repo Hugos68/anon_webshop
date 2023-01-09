@@ -10,11 +10,6 @@ export const load: PageServerLoad = async ({locals}) => {
 export const actions: Actions = {
     login: async ({request, locals, url, cookies}) => {
 
-        // Check if user consents to required cookies, if not return
-        const consentCookie = cookies.get("cookieconsent");
-        if (!consentCookie) return;
-        else if (!JSON.parse(consentCookie).required) return;
-
         const body = Object.fromEntries(await request.formData());
 
         const provider = url.searchParams.get("provider") as Provider;

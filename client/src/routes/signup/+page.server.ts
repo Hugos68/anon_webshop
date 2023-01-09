@@ -25,7 +25,7 @@ export const actions: Actions = {
             });
         }
 
-        const {data, error: err} = await locals.sb.auth.signUp({
+        const {error: err, data}  = await locals.sb.auth.signUp({
             email: body.email as string,
             password: body.password as string
         });
@@ -41,7 +41,13 @@ export const actions: Actions = {
             });
         }
 
-        // TODO: When User is already registered give error message
+        // TODO
+        // Janky hotfix to check wether an email is taken or not until supabase gives us a better solution
+        if(data?.user?.identities?.length === 0){
+            return fail(500, {
+                message: "Email is already registered"
+            });
+        }
 
         throw redirect(303, '/login');
     }
