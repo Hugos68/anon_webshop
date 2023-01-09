@@ -41,11 +41,8 @@ export const actions: Actions = {
             });
         }
 
-        if (data.user) {
-            return fail(500, {
-                message: "Email already registered"
-            });
-        }
+        // TODO: When User is already registered give error message
+
         throw redirect(303, '/login');
     }
 }
