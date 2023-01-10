@@ -68,9 +68,12 @@
             <header class="w-full navbar bg-primary px-[5vw] top-0 z-[999] sticky">
                 <nav class="flex justify-between w-full">
                     <div class="flex-none min-lg:hidden">
-                        <label for="navbar-toggle" class="btn btn-square btn-ghost text-accent">
-                            <svg viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                        </label>
+                        <div class="tooltip tooltip-right" data-tip="Navbar">
+                            <label for="navbar-toggle" class="btn btn-square btn-ghost text-accent">
+                                <svg viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                            </label>
+                        </div>
+
                     </div>
                     <div class="flex gap-5 lg:hidden">
                         <a data-sveltekit-preload-data="hover" class="underline-animation"  href="/home" class:active={$page.url.pathname === '/home'}>Home</a>
