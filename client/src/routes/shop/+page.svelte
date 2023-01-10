@@ -35,7 +35,7 @@
 
 <section class="flex flex-col items-center gap-12">
     <h1 class="text-xl">Shop</h1>
-    <p class="text-[clamp(2rem,10vw,5rem)] font-bold">
+    <p class="text-[clamp(2rem,9vw,5rem)] font-bold">
         <span>Find.</span>
         <span>Buy.</span>
         <span>Enjoy.</span>
