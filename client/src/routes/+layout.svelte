@@ -63,7 +63,7 @@
 <div class="drawer">
     <input id="navbar-toggle" type="checkbox" class="drawer-toggle" />
     {#key $page.route.id}
-        <div class="drawer-content scroll-pt-24">
+        <div class="lg:drawer-content scroll-pt-24">
     <!--        HEADER-->
             <header class="w-full navbar bg-primary px-[5vw] top-0 z-[999] sticky">
                 <nav class="flex justify-between w-full">
@@ -152,9 +152,9 @@
         </div>
     {/key}
 <!--    SIDEBAR-->
-    <div class="drawer-side">
+    <div class="lg:drawer-side">
         <label for="navbar-toggle" class="drawer-overlay"></label>
-        <nav class="menu py-3 px-8 w-[min(75vw,17.5rem)] bg-primary flex flex-col gap-8">
+        <nav class="menu min-lg:hidden py-3 px-8 w-[min(75vw,17.5rem)] bg-primary flex flex-col gap-8">
 <!--            TODO: Add logo, incorporate slogan-->
             <div>
                 <p class="text-xl font-semibold">Subjective</p>
