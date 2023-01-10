@@ -1,11 +1,12 @@
 <script lang="ts">
-    import {enhance} from "$app/forms";
+    import {applyAction, enhance} from "$app/forms";
     import toast from "svelte-french-toast";
     import {TOAST_STYLE} from "../../app_constants.ts";
     import type {ActionResult} from "@sveltejs/kit";
 
     const handleLogin = () => {
         return async ({ result }: ActionResult) => {
+            await applyAction(result);
             if (result.type === 'redirect') {
                 toast.success('Successfully logged in!', TOAST_STYLE);
             }
