@@ -179,7 +179,8 @@
         <div class="modal-box bg-primary">
             <h3 class="font-bold text-lg">Cookies</h3>
             <p class="py-4">By clicking “Accept” or "Accept All", you agree Subjective can store cookies on your device and disclose
-                information in accordance with our <a class="link" href="/legal#cookies">Cookie Policy</a>.</p>
+                information in accordance with our <a class="link" href="/legal#cookies">Cookie Policy</a>.
+            </p>
             <div class="flex flex-col">
                 <div class="form-control">
                     <label class="label cursor-pointer">
@@ -200,7 +201,6 @@
                     </label>
                 </div>
             </div>
-
             <form class="modal-action" method="POST" use:enhance>
                 <button formaction="/?/setCookieConsent&cookies={JSON.stringify(currentCookies)}" type="submit">
                     <label for="consent-cookies-popup" class="btn bg-secondary btn-ghost text-accent">Accept</label>
