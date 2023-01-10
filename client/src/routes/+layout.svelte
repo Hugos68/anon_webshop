@@ -53,17 +53,23 @@
         functional : false,
         personalized : false
     }
+    let innerWidth = 0;
+    $: if (innerWidth > 1000 && navbar && navbar.checked) {
+        toggleNavBar();
+    }
 </script>
 
 <svelte:head>
     <title>{pageTitle}</title>
 </svelte:head>
 
-<Toaster />
+<svelte:window bind:innerWidth />
+
+
 <div class="drawer">
     <input id="navbar-toggle" type="checkbox" class="drawer-toggle" />
     {#key $page.route.id}
-        <div class="lg:drawer-content scroll-pt-24">
+        <div class="drawer-content scroll-pt-24">
     <!--        HEADER-->
             <header class="w-full navbar bg-primary px-[5vw] top-0 z-[999] sticky">
                 <nav class="flex justify-between w-full">
@@ -152,9 +158,9 @@
         </div>
     {/key}
 <!--    SIDEBAR-->
-    <div class="lg:drawer-side">
+    <div class="drawer-side">
         <label for="navbar-toggle" class="drawer-overlay"></label>
-        <nav class="menu min-lg:hidden py-3 px-8 w-[min(75vw,17.5rem)] bg-primary flex flex-col gap-8">
+        <nav class="menu py-3 px-8 w-[min(75vw,17.5rem)] bg-primary flex flex-col gap-8">
 <!--            TODO: Add logo, incorporate slogan-->
             <div>
                 <p class="text-xl font-semibold">Subjective</p>
@@ -212,3 +218,6 @@
         </div>
     </div>
 {/if}
+
+<!--TOASTER FOR CREATING TOASTS-->
+<Toaster />
