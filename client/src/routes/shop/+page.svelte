@@ -1,11 +1,8 @@
 <script>
-    import {flip} from "svelte/animate";
     import {fly} from "svelte/transition";
     import {createSearchStore, filterHandler} from "$lib/stores/search.ts";
     import {onDestroy} from "svelte";
-    import toast from "svelte-french-toast";
-    import {TOAST_STYLE} from "../../app_constants.ts";
-    import {cart} from "$lib/stores/cart.ts";
+    import ProductModal from "$lib/components/ProductModal.svelte";
 
     export let data;
 
@@ -22,15 +19,6 @@
     onDestroy(() => {
         unsubscribe();
     });
-
-    const addToShoppingCart = (product) => {
-        if (!data.session) {
-            toast.error('You must be logged in before purchasing products', TOAST_STYLE);
-            return;
-        }
-        cart.addProduct(product);
-        toast.success('Item added to cart', TOAST_STYLE);
-    }
 </script>
 
 <section class="flex flex-col items-center gap-12">
@@ -56,38 +44,20 @@
 </section>
 <section class="flex flex-wrap justify-evenly gap-6 flex-auto">
     {#each $searchStore.filtered as product (product.id)}
-        <div animate:flip={{duration: 250}}>
-            <label class="cursor-pointer" for="product-modal-{product.id}" >
-                <div in:fly={{delay : product.id*50}} class="card max-h-[30rem] min-w-[16.5rem] max-w-[20rem] bg-primary shadow-xl">
-                    <figure><img src="{product.thumbnail}" alt="{product.thumbnail}" /></figure>
+        <ProductModal {product} showAddToCartButton>
+            <div in:fly={{delay : product.id*50}} class="card max-h-[30rem] min-w-[16.5rem] max-w-[20rem] bg-primary shadow-xl">
+                <figure><img src="{product.thumbnail}" alt="{product.thumbnail}" /></figure>
+                <div class="flex justify-between">
                     <div class="badge badge-secondary m-6">{product.category}</div>
-                    <div class="card-body">
-                        <h2 class="card-title">{product.title}</h2>
-                        <p>{product.description}</p>
-                        <div class="card-actions justify-between items-center">
-                            <div class="badge badge-lg">${product.price}</div>
-                            <button class="btn btn-secondary" on:click={addToShoppingCart(product)}>Add to cart</button>
-                        </div>
-                    </div>
+                    <div class="badge badge-accent   m-6">${product.price}</div>
                 </div>
-            </label>
-            <input  type="checkbox" id="product-modal-{product.id}" class="modal-toggle " />
-            <label for="product-modal-{product.id}" class="modal cursor-pointer">
-                <div class="card min-lg:card-side max-h-[30rem]     bg-primary shadow-xl mx-12">
-                    <figure class="relative">
-                        <img src="{product.thumbnail}" alt="{product.thumbnail}"/>
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">{product.title}</h2>
-                        <p>{product.description}</p>
-                        <div class="card-actions justify-between items-center">
-                            <div class="badge badge-lg">${product.price}</div>
-                            <button class="btn btn-secondary" on:click={addToShoppingCart(product)}>Add to cart</button>
-                        </div>
-                    </div>
+
+                <div class="card-body">
+                    <h2 class="card-title">{product.title}</h2>
+                    <p>{product.description}</p>
                 </div>
-            </label>
-        </div>
+            </div>
+        </ProductModal>
     {/each}
 </section>
 
