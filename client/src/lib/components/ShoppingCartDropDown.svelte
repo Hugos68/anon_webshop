@@ -22,13 +22,14 @@
                     </div>
                 {/each}
             </div>
+            <li>
+                <a class="btn btn-accent text-secondary" data-sveltekit-preload-data="hover" href="/cart">Go to Checkout</a>
+            </li>
         {:else}
             <p class="text-center py-4">Your cart is empty</p>
+            <li>
+                <a class="btn btn-accent text-secondary" data-sveltekit-preload-data="hover" href="/shop">Go to Shop</a>
+            </li>
         {/if}
-        <li>
-            <a class="btn btn-accent text-secondary" data-sveltekit-preload-data="hover" href="/cart#checkout">Go to Checkout</a>
-        </li>
     </ul>
-
-
 </div>
