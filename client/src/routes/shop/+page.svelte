@@ -1,6 +1,6 @@
 <script>
     import {fly} from "svelte/transition";
-    import {createSearchStore, filterHandler} from "$lib/stores/search.ts";
+    import {    filterHandler, createSearchStore} from "$lib/stores/search.ts";
     import {onDestroy} from "svelte";
     import ProductModal from "$lib/components/ProductModal.svelte";
 

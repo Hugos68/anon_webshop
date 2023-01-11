@@ -9,7 +9,6 @@ export const createSearchStore = (data: Product[]) => {
     }) satisfies Writable<SearchStore>
     return { subscribe, set, update };
 }
-
 export const filterHandler = (store: SearchStore) => {
     const searchTerm = store.search.toLowerCase() || "";
     store.filtered = store.data.filter((item:any) => {

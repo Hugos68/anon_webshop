@@ -4,10 +4,8 @@ import {createCookieStorage, persist} from "@macfja/svelte-persistent-store"
 
 const createCart = () => {
     const cart: Writable<CartItem[]> = writable([]);
-
     persist<CartItem[]>(cart, createCookieStorage(), "shopping-cart");
     const {subscribe, update}: Writable<CartItem[]> = cart;
-
     return {
         subscribe,
         addProduct: (product: Product) => {
@@ -39,29 +37,18 @@ const createCart = () => {
 
 export const cart = createCart();
 
-export const cartPrice = derived(cart, () => {
-    let cartItems: CartItem[] = [];
-    cart.subscribe(cart => {
-        cartItems = cart as CartItem[];
-    });
-
+export const cartPrice = derived(cart, (cart) => {
     let totalPrice: number = 0;
-    cartItems.forEach(cartItem => {
+    cart.forEach(cartItem => {
         totalPrice+= cartItem.product.price * cartItem.quantity;
     });
     return totalPrice;
 });
 
-export const cartQuantity = derived(cart, () => {
-    let cartItems: CartItem[] = [];
-    cart.subscribe(cart => {
-        cartItems = cart as CartItem[];
-    });
-
+export const cartQuantity = derived(cart, (cart) => {
     let totalQuantity: number = 0;
-    cartItems.forEach(cartItem => {
+    cart.forEach(cartItem => {
         totalQuantity+=cartItem.quantity;
     });
-    // TODO: Fix stores on different pages and save this
     return totalQuantity;
 });
